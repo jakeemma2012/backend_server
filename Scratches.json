@@ -1,0 +1,17 @@
+{
+    "movieId": 0,
+    "title": "Avenger",
+    "director": "Jake Emma",
+    "studio": "Marvel",
+    "movieCast": [
+      "Robert Downey Jr",
+      "Chris Evans",
+      "Mark Ruffalo",
+      "Chris Hemsworth",
+      "Scarlett Johansson",
+      "Jeremy Renner",
+      "Don Cheadle"
+    ],
+    "releaseYear": 2012,
+    "poster": "poster_9da882c3e0b6"
+  }

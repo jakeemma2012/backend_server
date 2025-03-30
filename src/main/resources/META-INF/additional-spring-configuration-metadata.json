@@ -1,0 +1,12 @@
+{"properties": [
+  {
+    "name": "project.poster",
+    "type": "java.lang.String",
+    "description": "A description for 'project.poster'"
+  },
+  {
+    "name": "base.url",
+    "type": "java.lang.String",
+    "description": "A description for 'base.url'"
+  }
+]}
