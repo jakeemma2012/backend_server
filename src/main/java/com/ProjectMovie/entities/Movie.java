@@ -33,7 +33,7 @@ public class Movie {
     @Max(value = 10, message = "Điểm đánh giá không hợp lệ")
     private Double rating;
 
-    private String overviewString;
+    private String overview;
 
     @Column(nullable = false)
     @NotNull(message = "Vui lòng nhập thể loại phim !")
@@ -52,21 +52,25 @@ public class Movie {
     @NotBlank(message = "Vui lòng nhập tên đạo diễn !")
     private String director;
 
-    @Column(nullable = false)
-    @NotBlank(message = "Vui lòng nhập poster !")
-    private String poster;
+
 
     @ElementCollection
     @CollectionTable(name = "movie_cast")
     private Set<String> movieCast;
 
-    @NotBlank(message = "Vui lòng nhập poster url !")
-    private String posterUrl;
+
 
     @Column(nullable = false)
     @NotNull(message = "Vui lòng nhập năm phát hành!")
     @Min(value = 1900, message = "Năm phát hành phải từ 1900 trở lên")
     @Max(value = 2100, message = "Năm phát hành không hợp lệ")
     private Integer releaseYear;
+
+    @Column(nullable = false)
+    @NotBlank(message = "Vui lòng nhập poster !")
+    private String imageUrl;
+
+    @NotBlank(message = "Vui lòng nhập poster url !")
+    private String videoUrl;
 
 }

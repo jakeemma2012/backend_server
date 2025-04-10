@@ -1,5 +1,9 @@
 package com.ProjectMovie.Auth.Services;
 
+import com.Exceptions.AuthFilterException;
+import com.Exceptions.UserAlreadyExistsException;
+
+import jakarta.security.auth.message.AuthException;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
@@ -25,17 +29,17 @@ public class AuthFilterService extends OncePerRequestFilter {
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain)
             throws IOException, ServletException {
-            final String authHeader = request.getHeader("Authorization");
-            final String jwt;
-            final String username;
+        final String authHeader = request.getHeader("Authorization");
+        final String jwt;
+        final String username;
 
+        try {
             if (authHeader == null || !authHeader.startsWith("Bearer ")) {
                 filterChain.doFilter(request, response);
                 return;
             }
 
             jwt = authHeader.substring(7);
-            
             username = jwtService.extractUsername(jwt);
 
             if (username != null && SecurityContextHolder.getContext().getAuthentication() == null) {
@@ -45,8 +49,24 @@ public class AuthFilterService extends OncePerRequestFilter {
                             userDetails, null, userDetails.getAuthorities());
                     authToken.setDetails(new WebAuthenticationDetailsSource().buildDetails(request));
                     SecurityContextHolder.getContext().setAuthentication(authToken);
+                } else {
+                    sendErrorResponse(response, HttpServletResponse.SC_UNAUTHORIZED, "Invalid JWT Token");
+                    return;
                 }
             }
+
             filterChain.doFilter(request, response);
+        } catch (Exception e) {
+            sendErrorResponse(response, HttpServletResponse.SC_INTERNAL_SERVER_ERROR, e.getMessage());
+        }
+    }
+
+    private void sendErrorResponse(HttpServletResponse response, int statusCode, String message) throws IOException {
+        response.setStatus(statusCode);
+        response.setContentType("application/json");
+        response.setCharacterEncoding("UTF-8");
+
+        String jsonResponse = String.format("{\"status\": %d, \"error\": \"%s\"}", statusCode, message);
+        response.getWriter().write(jsonResponse);
     }
 }

@@ -1,4 +1,7 @@
 package com.Exceptions;
 
-public class MovieException {
+public class MovieException extends RuntimeException {
+    public MovieException(String message) {
+        super(message);
+    }
 }

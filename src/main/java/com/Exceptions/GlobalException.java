@@ -7,25 +7,23 @@ import com.ProjectMovie.Exceptions.UserException;
 import com.fasterxml.jackson.core.exc.StreamWriteException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.jsonwebtoken.io.IOException;
-import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ProblemDetail;
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.AccessDeniedException;
 import org.springframework.security.authentication.LockedException;
 import org.springframework.security.core.AuthenticationException;
+import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.time.LocalDateTime;
 
-@RestControllerAdvice
+@ControllerAdvice
 public class GlobalException {
 
-    private static final ObjectMapper objectMapper = new ObjectMapper();
-
-    
     @ExceptionHandler(FileExistException.class)
     @ResponseStatus(HttpStatus.BAD_REQUEST)
     public ProblemDetail handleFileExistException(FileExistException e) {
@@ -52,10 +50,16 @@ public class GlobalException {
 
     @ExceptionHandler(UserAlreadyExistsException.class)
     @ResponseStatus(HttpStatus.CONFLICT)
-    public ProblemDetail handleUserAlreadyExistsException(UserAlreadyExistsException e) {
-        var problemDetail = ProblemDetail.forStatusAndDetail(HttpStatus.CONFLICT, e.getMessage());
+    public ResponseEntity<ProblemDetail> handleUserAlreadyExistsException(UserAlreadyExistsException e) {
+        ProblemDetail problemDetail = ProblemDetail.forStatusAndDetail(HttpStatus.CONFLICT, e.getMessage());
         problemDetail.setTitle("User Already Exists");
-        return problemDetail;
+        problemDetail.setProperty("timestamp", LocalDateTime.now());
+        problemDetail.setProperty("status", "error");
+
+        return ResponseEntity
+                .status(HttpStatus.CONFLICT)
+                .contentType(MediaType.APPLICATION_JSON)
+                .body(problemDetail);
     }
 
     @ExceptionHandler(InvalidCredentialsException.class)
@@ -116,18 +120,13 @@ public class GlobalException {
         return problemDetail;
     }
 
-
-    public static void sendErrorResponse(HttpServletResponse response,String title, String detail) throws IOException, StreamWriteException, java.io.IOException {
-        response.setStatus(HttpServletResponse.SC_OK);
-        response.setContentType("application/json;charset=UTF-8");
-
-        Map<String, Object> errorResponse = new HashMap<>();
-        errorResponse.put("type", "about:blank");
-        errorResponse.put("title", title);
-        errorResponse.put("detail", detail);
-
-        objectMapper.writeValue(response.getWriter(), errorResponse);
-        return;
+    @ExceptionHandler(AuthFilterException.class)
+    @ResponseStatus(HttpStatus.OK)
+    public static ProblemDetail sendErrorResponse(AuthFilterException e) {
+        var problemDetail = ProblemDetail.forStatusAndDetail(HttpStatus.OK, e.getMessage());
+        problemDetail.setTitle("Can not filter Chain");
+        problemDetail.setStatus(403);
+        return problemDetail;
     }
 
 }

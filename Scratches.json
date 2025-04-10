@@ -15,3 +15,27 @@
     "releaseYear": 2012,
     "poster": "poster_9da882c3e0b6"
   }
+
+{
+  "movieId": 0,
+  "title": "title_3a8c6d307fa9",
+  "rating": 0.00,
+  "overviewString": "overviewString_33be6e029292",
+  "genres": "genres_38ac19024811",
+  "status": "UPCOMING",
+  "studio": "studio_da0d8bfccd1b",
+  "director": "director_75f59ef08e85",
+  "poster": "poster_26ada8e2d4a8",
+  "movieCast": [
+    "movieCast_84846075f8ea"
+  ],
+  "posterUrl": "posterUrl_94d4b31c5227",
+  "releaseYear": 0
+}
+
+{
+  "name": "name_bb99b06e331f",
+  "username": "username_3b361b7be30a",
+  "password": "password_e833008fbefc",
+  "email": "email_5c7a457e6058"
+}

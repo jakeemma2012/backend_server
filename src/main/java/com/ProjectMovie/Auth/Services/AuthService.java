@@ -56,10 +56,13 @@ public class AuthService {
     public AuthResponse login(LoginRequest request) {
         String email = request.getEmail();
         String password = request.getPassword();
-        UsernamePasswordAuthenticationToken authToken = new UsernamePasswordAuthenticationToken(email, password);
 
-        User user = userRepository.findByEmail(request.getEmail())
+        User user = userRepository.findByEmail(email)
                 .orElseThrow(() -> new UserException("User not found"));
+
+        if (!passwordEncoder.matches(password, user.getPassword())) {
+            throw new UserException("Invalid password");
+        }
 
         var accessToken = jwtService.generateToken(user);
         var refreshToken = refreshTokenService.createRefreshToken(user.getEmail());
