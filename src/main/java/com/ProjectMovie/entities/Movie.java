@@ -33,7 +33,7 @@ public class Movie {
     @Max(value = 10, message = "Điểm đánh giá không hợp lệ")
     private Double rating;
 
-    @Column(nullable = false)
+    @Column(nullable = false, length = 2000)
     private String overviewString;
 
     @Column(nullable = false)
@@ -62,6 +62,10 @@ public class Movie {
     @Min(value = 1900, message = "Năm phát hành phải từ 1900 trở lên")
     @Max(value = 2100, message = "Năm phát hành không hợp lệ")
     private Integer releaseYear;
+
+    @Column(nullable = false)
+    @NotNull(message = "Vui lòng nhập thời lượng phim!")
+    private Integer duration;
 
     @Column(nullable = false)
     @NotBlank(message = "Vui lòng nhập image URL !")

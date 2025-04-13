@@ -82,6 +82,7 @@ public class MovieServiceImpl implements MovieService {
                 movieDTO.getDirector(),
                 movieDTO.getMovieCast(),
                 movieDTO.getReleaseYear(),
+                movieDTO.getDuration(),
                 imageUrl,
                 videoUrl);
 
@@ -101,6 +102,7 @@ public class MovieServiceImpl implements MovieService {
                 savedMovie.getDirector(),
                 savedMovie.getMovieCast(),
                 savedMovie.getReleaseYear(),
+                savedMovie.getDuration(),
                 savedMovie.getImageUrl(),
                 savedMovie.getVideoUrl());
 
@@ -127,6 +129,7 @@ public class MovieServiceImpl implements MovieService {
                 movie.getDirector(),
                 movie.getMovieCast(),
                 movie.getReleaseYear(),
+                movie.getDuration(),
                 movie.getImageUrl(),
                 movie.getVideoUrl());
         // 4. nếu có thì trả về movieDTO
@@ -153,6 +156,7 @@ public class MovieServiceImpl implements MovieService {
                     movie.getDirector(),
                     movie.getMovieCast(),
                     movie.getReleaseYear(),
+                    movie.getDuration(),
                     movie.getImageUrl(),
                     movie.getVideoUrl());
             movieDTOs.add(movieDTO);

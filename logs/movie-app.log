@@ -7261,3 +7261,295 @@ Caused by: java.lang.Error: Unresolved compilation problems:
 2025-04-13 15:15:32 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
 2025-04-13 15:15:32 [restartedMain] INFO  c.P.MovieBackendSpringBootApplication - Started MovieBackendSpringBootApplication in 0.485 seconds (process running for 3321.026)
 2025-04-13 15:15:32 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2025-04-13 15:47:16 [restartedMain] INFO  c.P.MovieBackendSpringBootApplication - Starting MovieBackendSpringBootApplication using Java 17.0.12 with PID 7736 (C:\Users\Admin\Desktop\BaseMent\MovieBackendSpringBoot\target\classes started by Admin in C:\Users\Admin\Desktop\BaseMent\MovieBackendSpringBoot)
+2025-04-13 15:47:16 [restartedMain] DEBUG c.P.MovieBackendSpringBootApplication - Running with Spring Boot v3.5.0-SNAPSHOT, Spring v6.2.6-SNAPSHOT
+2025-04-13 15:47:16 [restartedMain] INFO  c.P.MovieBackendSpringBootApplication - No active profile set, falling back to 1 default profile: "default"
+2025-04-13 15:47:16 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-04-13 15:47:16 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-04-13 15:47:17 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-13 15:47:17 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 84 ms. Found 3 JPA repository interfaces.
+2025-04-13 15:47:18 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-04-13 15:47:18 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-04-13 15:47:18 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-04-13 15:47:18 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-04-13 15:47:18 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2102 ms
+2025-04-13 15:47:18 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-13 15:47:18 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.13.Final
+2025-04-13 15:47:18 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-13 15:47:19 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-13 15:47:19 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-04-13 15:47:19 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.mariadb.jdbc.MariaDbConnection@10db27f5
+2025-04-13 15:47:19 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-04-13 15:47:19 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-13 15:47:19 [restartedMain] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 10.4.32
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-04-13 15:47:20 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-13 15:47:20 [restartedMain] DEBUG c.P.Auth.Services.AuthFilterService - Filter 'authFilterService' configured for use
+2025-04-13 15:47:21 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2025-04-13 15:47:21 [restartedMain] WARN  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2025-04-13 15:47:21 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-13 15:47:21 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-04-13 15:47:21 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-04-13 15:47:21 [restartedMain] INFO  c.P.MovieBackendSpringBootApplication - Started MovieBackendSpringBootApplication in 6.358 seconds (process running for 6.832)
+2025-04-13 15:47:26 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-13 15:47:26 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-04-13 15:47:26 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-04-13 16:45:35 [restartedMain] INFO  c.P.MovieBackendSpringBootApplication - Starting MovieBackendSpringBootApplication using Java 17.0.12 with PID 13676 (C:\Users\Admin\Desktop\BaseMent\MovieBackendSpringBoot\target\classes started by Admin in C:\Users\Admin\Desktop\BaseMent\MovieBackendSpringBoot)
+2025-04-13 16:45:35 [restartedMain] DEBUG c.P.MovieBackendSpringBootApplication - Running with Spring Boot v3.5.0-SNAPSHOT, Spring v6.2.6-SNAPSHOT
+2025-04-13 16:45:35 [restartedMain] INFO  c.P.MovieBackendSpringBootApplication - No active profile set, falling back to 1 default profile: "default"
+2025-04-13 16:45:35 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-04-13 16:45:35 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-04-13 16:45:36 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-13 16:45:36 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 69 ms. Found 3 JPA repository interfaces.
+2025-04-13 16:45:37 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-04-13 16:45:37 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-04-13 16:45:37 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-04-13 16:45:37 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-04-13 16:45:37 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2032 ms
+2025-04-13 16:45:38 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-13 16:45:38 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.13.Final
+2025-04-13 16:45:38 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-13 16:45:38 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-13 16:45:38 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-04-13 16:45:38 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.mariadb.jdbc.MariaDbConnection@363f7071
+2025-04-13 16:45:38 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-04-13 16:45:38 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-13 16:45:38 [restartedMain] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 10.4.32
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-04-13 16:45:40 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-13 16:45:40 [restartedMain] DEBUG c.P.Auth.Services.AuthFilterService - Filter 'authFilterService' configured for use
+2025-04-13 16:45:40 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2025-04-13 16:45:40 [restartedMain] WARN  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2025-04-13 16:45:40 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-13 16:45:41 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-04-13 16:45:41 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-04-13 16:45:41 [restartedMain] INFO  c.P.MovieBackendSpringBootApplication - Started MovieBackendSpringBootApplication in 6.345 seconds (process running for 6.696)
+2025-04-13 16:45:44 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-13 16:45:44 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-04-13 16:45:44 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-04-13 16:47:24 [http-nio-8080-exec-3] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.multipart.support.MissingServletRequestPartException: Required part 'movieDTO' is not present.]
+2025-04-13 16:48:21 [http-nio-8080-exec-5] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.multipart.support.MissingServletRequestPartException: Required part 'movieDTO' is not present.]
+2025-04-13 16:48:31 [http-nio-8080-exec-6] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.multipart.support.MissingServletRequestPartException: Required part 'movieDTO' is not present.]
+2025-04-13 16:49:05 [http-nio-8080-exec-8] INFO  c.P.Services.MovieServiceImpl - Starting addMovie process
+2025-04-13 16:49:05 [http-nio-8080-exec-8] DEBUG c.P.Services.MovieServiceImpl - Mapping DTO to Movie entity
+2025-04-13 16:49:05 [http-nio-8080-exec-8] DEBUG c.P.Services.MovieServiceImpl - Saving movie to database
+2025-04-13 16:49:05 [http-nio-8080-exec-8] INFO  c.P.Services.MovieServiceImpl - Completed addMovie process successfully
+2025-04-13 18:57:25 [HikariPool-1:housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2h5m45s944ms456µs800ns).
+2025-04-13 19:10:20 [http-nio-8080-exec-1] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.multipart.MaxUploadSizeExceededException: Maximum upload size exceeded]
+2025-04-13 19:10:45 [http-nio-8080-exec-3] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.multipart.MaxUploadSizeExceededException: Maximum upload size exceeded]
+2025-04-13 19:11:06 [http-nio-8080-exec-4] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.multipart.MaxUploadSizeExceededException: Maximum upload size exceeded]
+2025-04-13 19:12:02 [http-nio-8080-exec-5] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.multipart.MaxUploadSizeExceededException: Maximum upload size exceeded]
+2025-04-13 19:12:09 [http-nio-8080-exec-6] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.multipart.MaxUploadSizeExceededException: Maximum upload size exceeded]
+2025-04-13 19:13:07 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-04-13 19:13:07 [Thread-5] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-13 19:13:09 [restartedMain] INFO  c.P.MovieBackendSpringBootApplication - Starting MovieBackendSpringBootApplication using Java 17.0.12 with PID 20220 (C:\Users\Admin\Desktop\BaseMent\MovieBackendSpringBoot\target\classes started by Admin in C:\Users\Admin\Desktop\BaseMent\MovieBackendSpringBoot)
+2025-04-13 19:13:09 [restartedMain] DEBUG c.P.MovieBackendSpringBootApplication - Running with Spring Boot v3.5.0-SNAPSHOT, Spring v6.2.6-SNAPSHOT
+2025-04-13 19:13:09 [restartedMain] INFO  c.P.MovieBackendSpringBootApplication - No active profile set, falling back to 1 default profile: "default"
+2025-04-13 19:13:09 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-04-13 19:13:09 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-04-13 19:13:11 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-13 19:13:11 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 118 ms. Found 3 JPA repository interfaces.
+2025-04-13 19:13:12 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-04-13 19:13:12 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-04-13 19:13:12 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-04-13 19:13:12 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-04-13 19:13:12 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3085 ms
+2025-04-13 19:13:12 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-13 19:13:13 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.13.Final
+2025-04-13 19:13:13 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-13 19:13:13 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-13 19:13:13 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-04-13 19:13:13 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.mariadb.jdbc.MariaDbConnection@5df85faa
+2025-04-13 19:13:14 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-04-13 19:13:14 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-13 19:13:14 [restartedMain] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 10.4.32
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-04-13 19:13:15 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-13 19:13:16 [restartedMain] DEBUG c.P.Auth.Services.AuthFilterService - Filter 'authFilterService' configured for use
+2025-04-13 19:13:16 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2025-04-13 19:13:16 [restartedMain] WARN  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2025-04-13 19:13:17 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-13 19:13:18 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-04-13 19:13:18 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-04-13 19:13:18 [restartedMain] INFO  c.P.MovieBackendSpringBootApplication - Started MovieBackendSpringBootApplication in 9.674 seconds (process running for 10.428)
+2025-04-13 19:13:26 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-13 19:13:26 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-04-13 19:13:26 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-04-13 19:13:27 [http-nio-8080-exec-1] INFO  c.P.Services.MovieServiceImpl - Starting addMovie process
+2025-04-13 19:13:27 [http-nio-8080-exec-1] DEBUG c.P.Services.MovieServiceImpl - Mapping DTO to Movie entity
+2025-04-13 19:13:27 [http-nio-8080-exec-1] DEBUG c.P.Services.MovieServiceImpl - Saving movie to database
+2025-04-13 19:13:27 [http-nio-8080-exec-1] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 1406, SQLState: 22001
+2025-04-13 19:13:27 [http-nio-8080-exec-1] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - (conn=1478) Data too long for column 'overview_string' at row 1
+2025-04-13 19:14:10 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-04-13 19:14:10 [Thread-5] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-13 19:14:10 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-04-13 19:14:10 [Thread-5] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-04-13 19:14:10 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-04-13 19:14:10 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-04-13 19:14:10 [restartedMain] INFO  c.P.MovieBackendSpringBootApplication - Starting MovieBackendSpringBootApplication using Java 17.0.12 with PID 20220 (C:\Users\Admin\Desktop\BaseMent\MovieBackendSpringBoot\target\classes started by Admin in C:\Users\Admin\Desktop\BaseMent\MovieBackendSpringBoot)
+2025-04-13 19:14:10 [restartedMain] DEBUG c.P.MovieBackendSpringBootApplication - Running with Spring Boot v3.5.0-SNAPSHOT, Spring v6.2.6-SNAPSHOT
+2025-04-13 19:14:10 [restartedMain] INFO  c.P.MovieBackendSpringBootApplication - No active profile set, falling back to 1 default profile: "default"
+2025-04-13 19:14:11 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-13 19:14:11 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 41 ms. Found 3 JPA repository interfaces.
+2025-04-13 19:14:11 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-04-13 19:14:11 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-04-13 19:14:11 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-04-13 19:14:11 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-04-13 19:14:11 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 810 ms
+2025-04-13 19:14:11 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-13 19:14:11 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-13 19:14:11 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-13 19:14:11 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2025-04-13 19:14:11 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Added connection org.mariadb.jdbc.MariaDbConnection@7afe521e
+2025-04-13 19:14:11 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2025-04-13 19:14:11 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-13 19:14:11 [restartedMain] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
+	Database driver: undefined/unknown
+	Database version: 10.4.32
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-04-13 19:14:11 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-13 19:14:12 [restartedMain] DEBUG c.P.Auth.Services.AuthFilterService - Filter 'authFilterService' configured for use
+2025-04-13 19:14:12 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2025-04-13 19:14:12 [restartedMain] WARN  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2025-04-13 19:14:12 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-13 19:14:12 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-04-13 19:14:12 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-04-13 19:14:12 [restartedMain] INFO  c.P.MovieBackendSpringBootApplication - Started MovieBackendSpringBootApplication in 1.926 seconds (process running for 64.628)
+2025-04-13 19:14:12 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2025-04-13 19:14:13 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-04-13 19:14:13 [Thread-7] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-13 19:14:14 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-04-13 19:14:14 [Thread-7] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-04-13 19:14:14 [Thread-7] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
+2025-04-13 19:14:14 [Thread-7] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
+2025-04-13 19:14:14 [restartedMain] INFO  c.P.MovieBackendSpringBootApplication - Starting MovieBackendSpringBootApplication using Java 17.0.12 with PID 20220 (C:\Users\Admin\Desktop\BaseMent\MovieBackendSpringBoot\target\classes started by Admin in C:\Users\Admin\Desktop\BaseMent\MovieBackendSpringBoot)
+2025-04-13 19:14:14 [restartedMain] DEBUG c.P.MovieBackendSpringBootApplication - Running with Spring Boot v3.5.0-SNAPSHOT, Spring v6.2.6-SNAPSHOT
+2025-04-13 19:14:14 [restartedMain] INFO  c.P.MovieBackendSpringBootApplication - No active profile set, falling back to 1 default profile: "default"
+2025-04-13 19:14:14 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-13 19:14:14 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 34 ms. Found 3 JPA repository interfaces.
+2025-04-13 19:14:14 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-04-13 19:14:14 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-04-13 19:14:14 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-04-13 19:14:14 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-04-13 19:14:14 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 610 ms
+2025-04-13 19:14:15 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-13 19:14:15 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-13 19:14:15 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-13 19:14:15 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Starting...
+2025-04-13 19:14:15 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Added connection org.mariadb.jdbc.MariaDbConnection@44ebf6fd
+2025-04-13 19:14:15 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Start completed.
+2025-04-13 19:14:15 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-13 19:14:15 [restartedMain] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-3)']
+	Database driver: undefined/unknown
+	Database version: 10.4.32
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-04-13 19:14:15 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-13 19:14:15 [restartedMain] DEBUG c.P.Auth.Services.AuthFilterService - Filter 'authFilterService' configured for use
+2025-04-13 19:14:15 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2025-04-13 19:14:15 [restartedMain] WARN  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2025-04-13 19:14:15 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-13 19:14:15 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-04-13 19:14:15 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-04-13 19:14:15 [restartedMain] INFO  c.P.MovieBackendSpringBootApplication - Started MovieBackendSpringBootApplication in 1.536 seconds (process running for 67.971)
+2025-04-13 19:14:15 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2025-04-13 19:14:50 [restartedMain] INFO  c.P.MovieBackendSpringBootApplication - Starting MovieBackendSpringBootApplication using Java 17.0.12 with PID 5084 (C:\Users\Admin\Desktop\BaseMent\MovieBackendSpringBoot\target\classes started by Admin in C:\Users\Admin\Desktop\BaseMent\MovieBackendSpringBoot)
+2025-04-13 19:14:50 [restartedMain] DEBUG c.P.MovieBackendSpringBootApplication - Running with Spring Boot v3.5.0-SNAPSHOT, Spring v6.2.6-SNAPSHOT
+2025-04-13 19:14:50 [restartedMain] INFO  c.P.MovieBackendSpringBootApplication - No active profile set, falling back to 1 default profile: "default"
+2025-04-13 19:14:50 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-04-13 19:14:50 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-04-13 19:14:51 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-13 19:14:52 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 115 ms. Found 3 JPA repository interfaces.
+2025-04-13 19:14:53 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-04-13 19:14:53 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-04-13 19:14:53 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-04-13 19:14:53 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-04-13 19:14:53 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3142 ms
+2025-04-13 19:14:53 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-13 19:14:54 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.13.Final
+2025-04-13 19:14:54 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-13 19:14:54 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-13 19:14:54 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-04-13 19:14:54 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.mariadb.jdbc.MariaDbConnection@3e5a3bef
+2025-04-13 19:14:54 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-04-13 19:14:55 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-13 19:14:55 [restartedMain] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 10.4.32
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-04-13 19:14:57 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-13 19:14:57 [restartedMain] DEBUG c.P.Auth.Services.AuthFilterService - Filter 'authFilterService' configured for use
+2025-04-13 19:14:57 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2025-04-13 19:14:57 [restartedMain] WARN  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2025-04-13 19:14:58 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-13 19:14:59 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-04-13 19:14:59 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-04-13 19:14:59 [restartedMain] INFO  c.P.MovieBackendSpringBootApplication - Started MovieBackendSpringBootApplication in 10.237 seconds (process running for 11.009)
+2025-04-13 19:17:15 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-13 19:17:15 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-04-13 19:17:15 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-04-13 19:17:16 [http-nio-8080-exec-1] INFO  c.P.Services.MovieServiceImpl - Starting addMovie process
+2025-04-13 19:17:16 [http-nio-8080-exec-1] DEBUG c.P.Services.MovieServiceImpl - Mapping DTO to Movie entity
+2025-04-13 19:17:16 [http-nio-8080-exec-1] DEBUG c.P.Services.MovieServiceImpl - Saving movie to database
+2025-04-13 19:17:16 [http-nio-8080-exec-1] INFO  c.P.Services.MovieServiceImpl - Completed addMovie process successfully
+2025-04-13 19:21:22 [http-nio-8080-exec-3] INFO  c.P.Services.MovieServiceImpl - Starting addMovie process
+2025-04-13 19:21:22 [http-nio-8080-exec-3] DEBUG c.P.Services.MovieServiceImpl - Mapping DTO to Movie entity
+2025-04-13 19:21:22 [http-nio-8080-exec-3] DEBUG c.P.Services.MovieServiceImpl - Saving movie to database
+2025-04-13 19:21:22 [http-nio-8080-exec-3] INFO  c.P.Services.MovieServiceImpl - Completed addMovie process successfully
+2025-04-13 19:24:32 [http-nio-8080-exec-5] INFO  c.P.Services.MovieServiceImpl - Starting addMovie process
+2025-04-13 19:24:32 [http-nio-8080-exec-5] DEBUG c.P.Services.MovieServiceImpl - Mapping DTO to Movie entity
+2025-04-13 19:24:32 [http-nio-8080-exec-5] DEBUG c.P.Services.MovieServiceImpl - Saving movie to database
+2025-04-13 19:24:32 [http-nio-8080-exec-5] INFO  c.P.Services.MovieServiceImpl - Completed addMovie process successfully
+2025-04-13 19:27:48 [http-nio-8080-exec-7] INFO  c.P.Services.MovieServiceImpl - Starting addMovie process
+2025-04-13 19:27:48 [http-nio-8080-exec-7] DEBUG c.P.Services.MovieServiceImpl - Mapping DTO to Movie entity
+2025-04-13 19:27:48 [http-nio-8080-exec-7] DEBUG c.P.Services.MovieServiceImpl - Saving movie to database
+2025-04-13 19:27:48 [http-nio-8080-exec-7] INFO  c.P.Services.MovieServiceImpl - Completed addMovie process successfully
+2025-04-13 19:32:45 [http-nio-8080-exec-9] INFO  c.P.Services.MovieServiceImpl - Starting addMovie process
+2025-04-13 19:32:45 [http-nio-8080-exec-9] DEBUG c.P.Services.MovieServiceImpl - Mapping DTO to Movie entity
+2025-04-13 19:32:45 [http-nio-8080-exec-9] DEBUG c.P.Services.MovieServiceImpl - Saving movie to database
+2025-04-13 19:32:45 [http-nio-8080-exec-9] INFO  c.P.Services.MovieServiceImpl - Completed addMovie process successfully
+2025-04-13 19:37:18 [http-nio-8080-exec-1] INFO  c.P.Services.MovieServiceImpl - Starting addMovie process
+2025-04-13 19:37:18 [http-nio-8080-exec-1] DEBUG c.P.Services.MovieServiceImpl - Mapping DTO to Movie entity
+2025-04-13 19:37:18 [http-nio-8080-exec-1] DEBUG c.P.Services.MovieServiceImpl - Saving movie to database
+2025-04-13 19:37:18 [http-nio-8080-exec-1] INFO  c.P.Services.MovieServiceImpl - Completed addMovie process successfully
+2025-04-13 19:40:39 [http-nio-8080-exec-3] INFO  c.P.Services.MovieServiceImpl - Starting addMovie process
+2025-04-13 19:40:39 [http-nio-8080-exec-3] DEBUG c.P.Services.MovieServiceImpl - Mapping DTO to Movie entity
+2025-04-13 19:40:39 [http-nio-8080-exec-3] DEBUG c.P.Services.MovieServiceImpl - Saving movie to database
+2025-04-13 19:40:39 [http-nio-8080-exec-3] INFO  c.P.Services.MovieServiceImpl - Completed addMovie process successfully
+2025-04-13 19:44:16 [http-nio-8080-exec-5] INFO  c.P.Services.MovieServiceImpl - Starting addMovie process
+2025-04-13 19:44:16 [http-nio-8080-exec-5] DEBUG c.P.Services.MovieServiceImpl - Mapping DTO to Movie entity
+2025-04-13 19:44:16 [http-nio-8080-exec-5] DEBUG c.P.Services.MovieServiceImpl - Saving movie to database
+2025-04-13 19:44:16 [http-nio-8080-exec-5] INFO  c.P.Services.MovieServiceImpl - Completed addMovie process successfully
+2025-04-13 19:46:41 [http-nio-8080-exec-7] INFO  c.P.Services.MovieServiceImpl - Starting addMovie process
+2025-04-13 19:46:41 [http-nio-8080-exec-7] DEBUG c.P.Services.MovieServiceImpl - Mapping DTO to Movie entity
+2025-04-13 19:46:41 [http-nio-8080-exec-7] DEBUG c.P.Services.MovieServiceImpl - Saving movie to database
+2025-04-13 19:46:41 [http-nio-8080-exec-7] INFO  c.P.Services.MovieServiceImpl - Completed addMovie process successfully

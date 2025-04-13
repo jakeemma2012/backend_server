@@ -15,7 +15,7 @@ import com.ProjectMovie.entities.MovieStatus;
 @Getter
 @Setter
 public class MovieDTO {
-    
+
     private Integer movieId;
 
     @NotBlank(message = "Vui lòng nhập tiêu đề phim !")
@@ -36,6 +36,8 @@ public class MovieDTO {
     private Set<String> movieCast;
 
     private Integer releaseYear;
+
+    private Integer duration;
 
     private String imageUrl;
 
