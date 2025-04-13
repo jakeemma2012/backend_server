@@ -10,15 +10,30 @@ import com.ProjectMovie.repositories.MovieRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.File;
 import java.io.IOException;
+import java.net.http.HttpResponse;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+import org.json.JSONObject;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
+import org.springframework.util.LinkedMultiValueMap;
+import org.springframework.util.MultiValueMap;
 
 @Service
 public class MovieServiceImpl implements MovieService {
@@ -26,6 +41,7 @@ public class MovieServiceImpl implements MovieService {
     private static final Logger logger = LoggerFactory.getLogger(MovieServiceImpl.class);
     private final MovieRepository movieRepository;
     private final FileService fileService;
+    private final RestTemplate restTemplate;
 
     @Value("${project.poster}")
     private String path;
@@ -33,83 +49,87 @@ public class MovieServiceImpl implements MovieService {
     @Value("${base.url}")
     private String baseUrl;
 
+    @Value("${base.url.api}")
+    private String baseUrlApi;
+
     public MovieServiceImpl(MovieRepository movieRepository, FileService fileService) {
         this.movieRepository = movieRepository;
         this.fileService = fileService;
+        this.restTemplate = new RestTemplate();
     }
 
     @Override
-    public MovieDTO addMovie(MovieDTO movieDTO, MultipartFile file) throws IOException {
-        if (Files.exists(Paths.get(path + File.separator + file.getOriginalFilename()))) {
-            throw new FileExistException("Phim đã tồn tại, vui lòng upload file khác !");
-        }
+    public MovieDTO addMovie(MovieDTO movieDTO, String response) throws IOException {
         logger.info("Starting addMovie process");
 
+        JSONObject jsonObject = new JSONObject(response);
+        String imageUrl = jsonObject.getJSONObject("data").getJSONObject("linkIMG").getString("link");
+        String videoUrl = jsonObject.getJSONObject("data").getJSONObject("linkVIDEO").getString("link");
         // 1. upload the file
-        logger.debug("Uploading file");
-        String fileName = fileService.uploadFile(path, file);
-        logger.debug("File uploaded successfully: {}", fileName);
-
-        // 2. set value poster as filename
-        movieDTO.setPoster(fileName);
-        logger.debug("Poster filename set: {}", fileName);
-
-        // Generate poster URL
-        String posterUrl = baseUrl + "file/" + fileName;
-        movieDTO.setPosterUrl(posterUrl);
+        movieDTO.setImageUrl(imageUrl);
+        movieDTO.setVideoUrl(videoUrl);
         // 3. map dto to Movie object
         logger.debug("Mapping DTO to Movie entity");
 
-        // Movie movie = new Movie(
-        //         null, // movieId should be null for new entities
-        //         movieDTO.getTitle(),
-        //         movieDTO.getDirector(),
-        //         movieDTO.getStudio(),
-        //         movieDTO.getMovieCast(),
-        //         movieDTO.getReleaseYear(),
-        //         movieDTO.getPoster(),
-        //         posterUrl);
+        Movie movie = new Movie(
+                null, // movieId should be null for new entities
+                movieDTO.getTitle(),
+                movieDTO.getRating(),
+                movieDTO.getOverviewString(),
+                movieDTO.getGenres(),
+                movieDTO.getStatus(),
+                movieDTO.getStudio(),
+                movieDTO.getDirector(),
+                movieDTO.getMovieCast(),
+                movieDTO.getReleaseYear(),
+                imageUrl,
+                videoUrl);
 
-        Movie movie = null;
-        
         // 4. save -> saved
         logger.debug("Saving movie to database");
         Movie savedMovie = movieRepository.save(movie);
 
         // 5. map Movie object to MovieDTO and return
-        MovieDTO response = new MovieDTO(
+        MovieDTO responseMovieDTO = new MovieDTO(
                 savedMovie.getMovieId(),
                 savedMovie.getTitle(),
-                savedMovie.getDirector(),
+                savedMovie.getRating(),
+                savedMovie.getOverviewString(),
+                savedMovie.getGenres(),
+                savedMovie.getStatus(),
                 savedMovie.getStudio(),
+                savedMovie.getDirector(),
                 savedMovie.getMovieCast(),
                 savedMovie.getReleaseYear(),
-                savedMovie.getPoster(),
-                posterUrl);
+                savedMovie.getImageUrl(),
+                savedMovie.getVideoUrl());
 
         logger.info("Completed addMovie process successfully");
-        return response;
+
+        return responseMovieDTO;
     }
 
     @Override
     public MovieDTO getMovieById(int id) {
         // 1. check DB có không
-        Movie movie = movieRepository.findById(id).orElseThrow(() -> new MovieNotFoundException("Không tìm thấy phim id : " + id));
+        Movie movie = movieRepository.findById(id)
+                .orElseThrow(() -> new MovieNotFoundException("Không tìm thấy phim id : " + id));
         // 2. nếu có thì trả về
-        String posterUrl = baseUrl + "file/" + movie.getPoster();
-        // 3. nếu không thì trả về null
 
         MovieDTO movieDTO = new MovieDTO(
                 movie.getMovieId(),
                 movie.getTitle(),
-                movie.getDirector(),
+                movie.getRating(),
+                movie.getOverviewString(),
+                movie.getGenres(),
+                movie.getStatus(),
                 movie.getStudio(),
+                movie.getDirector(),
                 movie.getMovieCast(),
                 movie.getReleaseYear(),
-                movie.getPoster(),
-                posterUrl);
+                movie.getImageUrl(),
+                movie.getVideoUrl());
         // 4. nếu có thì trả về movieDTO
-
         return movieDTO;
     }
 
@@ -122,16 +142,19 @@ public class MovieServiceImpl implements MovieService {
         List<MovieDTO> movieDTOs = new ArrayList<>();
 
         for (Movie movie : movies) {
-            String posterUrl = baseUrl + "file/" + movie.getPoster();
             MovieDTO movieDTO = new MovieDTO(
                     movie.getMovieId(),
                     movie.getTitle(),
-                    movie.getDirector(),
+                    movie.getRating(),
+                    movie.getOverviewString(),
+                    movie.getGenres(),
+                    movie.getStatus(),
                     movie.getStudio(),
+                    movie.getDirector(),
                     movie.getMovieCast(),
                     movie.getReleaseYear(),
-                    movie.getPoster(),
-                    posterUrl);
+                    movie.getImageUrl(),
+                    movie.getVideoUrl());
             movieDTOs.add(movieDTO);
         }
         return movieDTOs;
@@ -139,59 +162,77 @@ public class MovieServiceImpl implements MovieService {
 
     @Override
     public MovieDTO updateMovie(int movieId, MovieDTO movieDTO, MultipartFile file) throws IOException {
-        // 1. check DB có không
-        // 2. nếu có thì update
-        Movie movie = movieRepository.findById(movieId).orElseThrow(() -> new MovieNotFoundException("Không tìm thấy phim id : " + movieId));
+        // // 1. check DB có không
+        // // 2. nếu có thì update
+        // Movie movie = movieRepository.findById(movieId)
+        // .orElseThrow(() -> new MovieNotFoundException("Không tìm thấy phim id : " +
+        // movieId));
 
-        String fileName = movie.getPoster();
-        if (file != null) {
-            Files.delete(Paths.get(path + File.separator + fileName));
-            fileName = fileService.uploadFile(path, file);
-        }
+        // String fileName = movie.getImageUrl();
+        // if (file != null) {
+        // Files.delete(Paths.get(path + File.separator + fileName));
+        // fileName = fileService.uploadFile(path, file);
+        // }
 
-        String posterUrl = baseUrl + "file/" + fileName;
+        // String posterUrl = baseUrl + "file/" + fileName;
 
-        movieDTO.setPoster(fileName);
+        // movieDTO.setPoster(fileName);
 
-        // Movie movie2 = new Movie(
-        //         movie.getMovieId(),
-        //         movieDTO.getTitle(),
-        //         movieDTO.getDirector(),
-        //         movieDTO.getStudio(),
-        //         movieDTO.getMovieCast(),
-        //         movieDTO.getReleaseYear(),
-        //         movieDTO.getPoster(),
-        //         posterUrl);
+        // // Movie movie2 = new Movie(
+        // // movie.getMovieId(),
+        // // movieDTO.getTitle(),
+        // // movieDTO.getDirector(),
+        // // movieDTO.getStudio(),
+        // // movieDTO.getMovieCast(),
+        // // movieDTO.getReleaseYear(),
+        // // movieDTO.getPoster(),
+        // // posterUrl);
 
-        Movie movie2 = null;
+        // Movie movie2 = null;
 
-        Movie updatedMovie = movieRepository.save(movie2);
+        // Movie updatedMovie = movieRepository.save(movie2);
 
-        MovieDTO response = new MovieDTO(
-                updatedMovie.getMovieId(),
-                updatedMovie.getTitle(),
-                updatedMovie.getDirector(),
-                updatedMovie.getStudio(),
-                updatedMovie.getMovieCast(),
-                updatedMovie.getReleaseYear(),
-                updatedMovie.getPoster(),
-                posterUrl);
-                
+        // MovieDTO response = new MovieDTO(
+        // updatedMovie.getMovieId(),
+        // updatedMovie.getTitle(),
+        // updatedMovie.getRating(),
+        // updatedMovie.getOverviewString(),
+        // updatedMovie.getGenres(),
+        // updatedMovie.getStatus(),
+        // updatedMovie.getStudio(),
+        // updatedMovie.getDirector(),
+        // updatedMovie.getPoster(),
+        // updatedMovie.getMovieCast(),
+        // posterUrl,
+        // updatedMovie.getReleaseYear());
 
-        return response;
+        // return response;
+        return null;
     }
 
     @Override
     public String deleteMovie(int movieId) throws IOException {
-        // 1. check DB có không
-        Movie movie = movieRepository.findById(movieId).orElseThrow(() -> new MovieNotFoundException("Không tìm thấy phim id : " + movieId));
+        Movie movie = movieRepository.findById(movieId)
+                .orElseThrow(() -> new MovieNotFoundException("Không tìm thấy phim id : " + movieId));
         int id = movie.getMovieId();
-        
-        Files.delete(Paths.get(path + File.separator + movie.getPoster()));
-        // 2. nếu có thì delete
+
+        HttpHeaders headers = new HttpHeaders();
+        headers.setContentType(MediaType.APPLICATION_JSON);
+
+        Map<String, String[]> requestBody = new HashMap<>();
+        requestBody.put("linkImage", new String[] { movie.getImageUrl() });
+        requestBody.put("linkVideo", new String[] { movie.getVideoUrl() });
+
+        HttpEntity<Map<String, String[]>> requestEntity = new HttpEntity<>(requestBody, headers);
+
+        ResponseEntity<String> rsp = restTemplate.postForEntity(
+                baseUrlApi + "/api/delete_file",
+                requestEntity,
+                String.class);
+
         movieRepository.deleteById(movieId);
-        // 3. nếu không thì trả về null
-        return "Movie " + id + " deleted successfully";
+
+        return "Delete response: " + rsp.getBody();
     }
 
 }

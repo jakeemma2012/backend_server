@@ -8,6 +8,8 @@ import lombok.Setter;
 
 import java.util.Set;
 
+import com.ProjectMovie.entities.MovieStatus;
+
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
@@ -18,21 +20,25 @@ public class MovieDTO {
 
     @NotBlank(message = "Vui lòng nhập tiêu đề phim !")
     private String title;
-    
-    @NotBlank(message = "Vui lòng nhập tên đạo diễn !")
-    private String director;
 
-    @NotBlank(message = "Vui lòng nhập tên studio !")
+    private Double rating;
+
+    private String overviewString;
+
+    private String genres;
+
+    private MovieStatus status;
+
     private String studio;
 
+    private String director;
+
     private Set<String> movieCast;
-    
+
     private Integer releaseYear;
 
-    @NotBlank(message = "Vui lòng nhập poster !")
-    private String poster;
+    private String imageUrl;
 
-    @NotBlank(message = "Vui lòng nhập đường dẫn poster !")
-    private String posterUrl;
+    private String videoUrl;
 
 }

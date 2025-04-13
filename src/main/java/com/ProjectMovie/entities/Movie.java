@@ -11,6 +11,7 @@ import lombok.NoArgsConstructor;
 
 import java.util.Set;
 
+import io.micrometer.common.lang.Nullable;
 
 @Entity
 @NoArgsConstructor
@@ -26,13 +27,13 @@ public class Movie {
     @NotBlank(message = "Vui lòng nhập tiêu đề phim !")
     private String title;
 
-
     @Column(nullable = false)
     @NotNull(message = "Vui lòng nhập điểm đánh giá !")
     @Min(value = 0, message = "Điểm đánh giá không hợp lệ")
     @Max(value = 10, message = "Điểm đánh giá không hợp lệ")
     private Double rating;
 
+    @Column(nullable = false)
     private String overviewString;
 
     @Column(nullable = false)
@@ -52,21 +53,21 @@ public class Movie {
     @NotBlank(message = "Vui lòng nhập tên đạo diễn !")
     private String director;
 
-    @Column(nullable = false)
-    @NotBlank(message = "Vui lòng nhập poster !")
-    private String poster;
-
     @ElementCollection
     @CollectionTable(name = "movie_cast")
     private Set<String> movieCast;
-
-    @NotBlank(message = "Vui lòng nhập poster url !")
-    private String posterUrl;
 
     @Column(nullable = false)
     @NotNull(message = "Vui lòng nhập năm phát hành!")
     @Min(value = 1900, message = "Năm phát hành phải từ 1900 trở lên")
     @Max(value = 2100, message = "Năm phát hành không hợp lệ")
     private Integer releaseYear;
+
+    @Column(nullable = false)
+    @NotBlank(message = "Vui lòng nhập image URL !")
+    private String imageUrl;
+
+    @NotBlank(message = "Vui lòng nhập video url !")
+    private String videoUrl;
 
 }

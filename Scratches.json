@@ -1,17 +1,19 @@
 {
-    "movieId": 0,
-    "title": "Avenger",
-    "director": "Jake Emma",
-    "studio": "Marvel",
-    "movieCast": [
-      "Robert Downey Jr",
-      "Chris Evans",
-      "Mark Ruffalo",
-      "Chris Hemsworth",
-      "Scarlett Johansson",
-      "Jeremy Renner",
-      "Don Cheadle"
-    ],
-    "releaseYear": 2012,
-    "poster": "poster_9da882c3e0b6"
-  }
+  "movieId": null,
+  "title": "Avenger: Endgame",
+  "rating": 8.5,
+  "overviewString": "Overview of the movie goes here",
+  "genres": "Action, Adventure, Sci-Fi",
+  "status": "RELEASED",
+  "studio": "Marvel Studios",
+  "director": "Russo Brothers",
+  "movieCast": [
+    "Robert Downey Jr",
+    "Chris Evans",
+    "Mark Ruffalo",
+    "Scarlett Johansson"
+  ],
+  "releaseYear": 2019,
+  "imageUrl": "http://example.com/image.jpg",
+  "videoUrl": "http://example.com/video.mp4"
+}

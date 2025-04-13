@@ -23,8 +23,8 @@ public class AuthFilterService extends OncePerRequestFilter {
     private final UserDetailsService userDetailsService;
 
     @Override
-    protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain)
-            throws IOException, ServletException {
+    protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) {
+        try {
             final String authHeader = request.getHeader("Authorization");
             final String jwt;
             final String username;
@@ -33,9 +33,8 @@ public class AuthFilterService extends OncePerRequestFilter {
                 filterChain.doFilter(request, response);
                 return;
             }
-
             jwt = authHeader.substring(7);
-            
+
             username = jwtService.extractUsername(jwt);
 
             if (username != null && SecurityContextHolder.getContext().getAuthentication() == null) {
@@ -48,5 +47,15 @@ public class AuthFilterService extends OncePerRequestFilter {
                 }
             }
             filterChain.doFilter(request, response);
+        } catch (Exception e) {
+            try {
+                response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
+                response.setContentType("application/json");
+                response.getWriter().write("{\"error\": \"" + e.getMessage() + "\"}");
+                response.getWriter().flush();
+            } catch (IOException ioException) {
+                response.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+            }
+        }
     }
 }

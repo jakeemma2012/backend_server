@@ -16,7 +16,7 @@ public class Actors {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-
+    
     @Column(nullable = false)
     @NotBlank(message = "Vui lòng nhập tên diễn viên !")
     private String name;
