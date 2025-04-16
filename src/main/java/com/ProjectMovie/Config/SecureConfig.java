@@ -18,10 +18,6 @@ import org.springframework.security.authentication.BadCredentialsException;
 import io.jsonwebtoken.ExpiredJwtException;
 import io.jsonwebtoken.MalformedJwtException;
 import io.jsonwebtoken.security.SignatureException;
-import io.jsonwebtoken.ExpiredJwtException;
-import io.jsonwebtoken.MalformedJwtException;
-import io.jsonwebtoken.security.SignatureException;
-import org.springframework.security.authentication.BadCredentialsException;
 
 @Configuration
 @RequiredArgsConstructor
@@ -35,7 +31,7 @@ public class SecureConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http.csrf(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/api/v1/auth/**")
+                        .requestMatchers("/api/v1/auth/**", "/api/v1/assets/**")
                         .permitAll()
                         .anyRequest()
                         .authenticated())
@@ -48,15 +44,17 @@ public class SecureConfig {
                             response.setStatus(HttpStatus.FORBIDDEN.value());
 
                             String errorMessage;
+                            Throwable cause = authException.getCause();
+
                             if (authException.getMessage() != null) {
                                 errorMessage = authException.getMessage();
                             } else if (authException instanceof BadCredentialsException) {
                                 errorMessage = "Invalid username or password";
-                            } else if (authException.getCause() instanceof ExpiredJwtException) {
+                            } else if (cause instanceof ExpiredJwtException) {
                                 errorMessage = "Token has expired";
-                            } else if (authException.getCause() instanceof SignatureException) {
+                            } else if (cause instanceof SignatureException) {
                                 errorMessage = "Invalid token signature";
-                            } else if (authException.getCause() instanceof MalformedJwtException) {
+                            } else if (cause instanceof MalformedJwtException) {
                                 errorMessage = "Malformed token";
                             } else {
                                 errorMessage = "Access denied. Please login first.";
