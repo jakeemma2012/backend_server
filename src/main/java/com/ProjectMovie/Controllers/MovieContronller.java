@@ -44,6 +44,7 @@ public class MovieContronller {
     public ResponseEntity<MovieDTO> addMovieHandler(
             @RequestPart MultipartFile image,
             @RequestPart MultipartFile video,
+            @RequestPart MultipartFile backdrop,
             @RequestPart String movieDTO)
             throws IOException, EmptyFileException {
 
@@ -63,6 +64,13 @@ public class MovieContronller {
             @Override
             public String getFilename() {
                 return video.getOriginalFilename();
+            }
+        });
+
+        body.add("backdrop", new ByteArrayResource(backdrop.getBytes()) {
+            @Override
+            public String getFilename() {
+                return backdrop.getOriginalFilename();
             }
         });
 

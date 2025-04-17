@@ -65,9 +65,11 @@ public class MovieServiceImpl implements MovieService {
         JSONObject jsonObject = new JSONObject(response);
         String imageUrl = jsonObject.getJSONObject("data").getJSONObject("linkIMG").getString("link");
         String videoUrl = jsonObject.getJSONObject("data").getJSONObject("linkVIDEO").getString("link");
+        String backdropUrl = jsonObject.getJSONObject("data").getJSONObject("linkBACKDROP").getString("link");
         // 1. upload the file
         movieDTO.setImageUrl(imageUrl);
         movieDTO.setVideoUrl(videoUrl);
+        movieDTO.setBackdropUrl(backdropUrl);
         // 3. map dto to Movie object
         logger.debug("Mapping DTO to Movie entity");
 
@@ -84,7 +86,8 @@ public class MovieServiceImpl implements MovieService {
                 movieDTO.getReleaseYear(),
                 movieDTO.getDuration(),
                 imageUrl,
-                videoUrl);
+                videoUrl,
+                backdropUrl);
 
         // 4. save -> saved
         logger.debug("Saving movie to database");
@@ -104,7 +107,8 @@ public class MovieServiceImpl implements MovieService {
                 savedMovie.getReleaseYear(),
                 savedMovie.getDuration(),
                 savedMovie.getImageUrl(),
-                savedMovie.getVideoUrl());
+                savedMovie.getVideoUrl(),
+                savedMovie.getBackdropUrl());
 
         logger.info("Completed addMovie process successfully");
 
@@ -131,7 +135,8 @@ public class MovieServiceImpl implements MovieService {
                 movie.getReleaseYear(),
                 movie.getDuration(),
                 movie.getImageUrl(),
-                movie.getVideoUrl());
+                movie.getVideoUrl(),
+                movie.getBackdropUrl());
         // 4. nếu có thì trả về movieDTO
         return movieDTO;
     }
@@ -158,7 +163,8 @@ public class MovieServiceImpl implements MovieService {
                     movie.getReleaseYear(),
                     movie.getDuration(),
                     movie.getImageUrl(),
-                    movie.getVideoUrl());
+                    movie.getVideoUrl(),
+                    movie.getBackdropUrl());
             movieDTOs.add(movieDTO);
         }
         return movieDTOs;
@@ -226,6 +232,7 @@ public class MovieServiceImpl implements MovieService {
         Map<String, String[]> requestBody = new HashMap<>();
         requestBody.put("linkImage", new String[] { movie.getImageUrl() });
         requestBody.put("linkVideo", new String[] { movie.getVideoUrl() });
+        requestBody.put("linkBackdrop", new String[] { movie.getBackdropUrl() });
 
         HttpEntity<Map<String, String[]>> requestEntity = new HttpEntity<>(requestBody, headers);
 

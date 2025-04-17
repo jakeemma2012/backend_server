@@ -74,4 +74,6 @@ public class Movie {
     @NotBlank(message = "Vui lòng nhập video url !")
     private String videoUrl;
 
+    @NotBlank(message = "Vui lòng nhập backdrop url !")
+    private String backdropUrl;
 }
