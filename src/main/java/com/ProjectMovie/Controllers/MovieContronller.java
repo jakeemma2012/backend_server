@@ -1,8 +1,12 @@
 package com.ProjectMovie.Controllers;
 
+import com.ProjectMovie.Auth.Entities.User;
+import com.ProjectMovie.Auth.Repositories.UserRepositories;
+import com.ProjectMovie.Auth.Repositories.WatchListRepositories;
 import com.ProjectMovie.Exceptions.EmptyFileException;
 import com.ProjectMovie.Interface.MovieService;
 import com.ProjectMovie.dto.MovieDTO;
+import com.ProjectMovie.entities.Watchlist;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
@@ -30,13 +34,18 @@ public class MovieContronller {
 
     private final MovieService movieService;
     private final RestTemplate restTemplate;
+    private final UserRepositories userRepository;
+    private final WatchListRepositories watchListRepositories;
 
     @Value("${base.url.api}")
     private String baseUrlApi;
 
-    public MovieContronller(MovieService movieService) {
+    public MovieContronller(MovieService movieService, UserRepositories userRepository,
+            WatchListRepositories watchListRepositories) {
         this.movieService = movieService;
         this.restTemplate = new RestTemplate();
+        this.userRepository = userRepository;
+        this.watchListRepositories = watchListRepositories;
     }
 
     @PreAuthorize("hasAuthority('ADMIN')")
@@ -105,6 +114,15 @@ public class MovieContronller {
         return new ResponseEntity<>(movieService.getMovieById(movieId), HttpStatus.OK);
     }
 
+    @GetMapping("/get_favorite")
+    public ResponseEntity<List<MovieDTO>> getFavoriteHandler(@RequestParam("email") String email) {
+        try {
+            return new ResponseEntity<>(movieService.getFavorite(email), HttpStatus.OK);
+        } catch (Exception e) {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+    }
+
     @DeleteMapping("/delete/{movieId}")
     public ResponseEntity<String> deleteMovieHandler(@PathVariable int movieId) throws IOException {
         return new ResponseEntity<>(movieService.deleteMovie(movieId), HttpStatus.OK);
@@ -115,6 +133,55 @@ public class MovieContronller {
             @RequestPart String movieDTO) throws IOException {
         MovieDTO dto = convertToDTO(movieDTO);
         return new ResponseEntity<>(movieService.updateMovie(movieId, dto, file), HttpStatus.OK);
+    }
+
+    @PostMapping("/add_favorite")
+    public ResponseEntity<String> addFavoriteHandler(@RequestParam("email") String email,
+            @RequestParam("movieId") int movieId) {
+        try {
+
+            User user = userRepository.findByEmail(email).orElseThrow();
+
+            if (user == null) {
+                return new ResponseEntity<>("User not found", HttpStatus.NOT_FOUND);
+            }
+
+            Watchlist watchlist = watchListRepositories.findByUserAndMovieId(user, movieId);
+
+            if (watchlist != null) {
+                return new ResponseEntity<>("Already in favorite", HttpStatus.CONFLICT);
+            }
+
+            Watchlist watchlist_create = new Watchlist(
+                    null,
+                    user,
+                    movieId);
+
+            watchListRepositories.save(watchlist_create);
+
+            return new ResponseEntity<>("Added to favorite", HttpStatus.OK);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return new ResponseEntity<>("Error adding to favorite", HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
+
+    @DeleteMapping("/delete_favorite")
+    public ResponseEntity<String> deleteFavoriteHandler(@RequestParam("email") String email,
+            @RequestParam("movieId") int movieId) {
+        User user = userRepository.findByEmail(email).orElseThrow();
+        if (user == null) {
+            return new ResponseEntity<>("User not found", HttpStatus.NOT_FOUND);
+        }
+        Watchlist watchlist = watchListRepositories.findByUserAndMovieId(user, movieId);
+
+        if (watchlist == null) {
+            return new ResponseEntity<>("Watchlist not found", HttpStatus.NOT_FOUND);
+        }
+
+        watchListRepositories.delete(watchlist);
+
+        return new ResponseEntity<>("Deleted from favorite", HttpStatus.OK);
     }
 
 }

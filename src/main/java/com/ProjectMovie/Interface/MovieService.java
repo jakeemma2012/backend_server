@@ -20,4 +20,6 @@ public interface MovieService {
     MovieDTO updateMovie(int movieId, MovieDTO movieDTO, MultipartFile file) throws IOException;
 
     String deleteMovie(int movieId) throws IOException;
+
+    List<MovieDTO> getFavorite(String email) throws Exception;
 }

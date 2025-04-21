@@ -1,11 +1,14 @@
 package com.ProjectMovie.Services;
 
-import com.ProjectMovie.Exceptions.FileExistException;
+import com.ProjectMovie.Auth.Entities.User;
+import com.ProjectMovie.Auth.Repositories.UserRepositories;
+import com.ProjectMovie.Auth.Repositories.WatchListRepositories;
 import com.ProjectMovie.Exceptions.MovieNotFoundException;
 import com.ProjectMovie.Interface.FileService;
 import com.ProjectMovie.Interface.MovieService;
 import com.ProjectMovie.dto.MovieDTO;
 import com.ProjectMovie.entities.Movie;
+import com.ProjectMovie.entities.Watchlist;
 import com.ProjectMovie.repositories.MovieRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -18,22 +21,13 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.multipart.MultipartFile;
 
-import java.io.File;
 import java.io.IOException;
-import java.net.http.HttpResponse;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
 import org.json.JSONObject;
-import org.springframework.http.HttpEntity;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.MediaType;
-import org.springframework.http.ResponseEntity;
-import org.springframework.util.LinkedMultiValueMap;
-import org.springframework.util.MultiValueMap;
 
 @Service
 public class MovieServiceImpl implements MovieService {
@@ -52,10 +46,16 @@ public class MovieServiceImpl implements MovieService {
     @Value("${base.url.api}")
     private String baseUrlApi;
 
-    public MovieServiceImpl(MovieRepository movieRepository, FileService fileService) {
+    private final UserRepositories userRepository;
+    private final WatchListRepositories watchListRepositories;
+
+    public MovieServiceImpl(MovieRepository movieRepository, FileService fileService, UserRepositories userRepository,
+            WatchListRepositories watchListRepositories) {
         this.movieRepository = movieRepository;
         this.fileService = fileService;
         this.restTemplate = new RestTemplate();
+        this.userRepository = userRepository;
+        this.watchListRepositories = watchListRepositories;
     }
 
     @Override
@@ -137,6 +137,7 @@ public class MovieServiceImpl implements MovieService {
                 movie.getImageUrl(),
                 movie.getVideoUrl(),
                 movie.getBackdropUrl());
+
         // 4. nếu có thì trả về movieDTO
         return movieDTO;
     }
@@ -224,7 +225,6 @@ public class MovieServiceImpl implements MovieService {
     public String deleteMovie(int movieId) throws IOException {
         Movie movie = movieRepository.findById(movieId)
                 .orElseThrow(() -> new MovieNotFoundException("Không tìm thấy phim id : " + movieId));
-        int id = movie.getMovieId();
 
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_JSON);
@@ -246,4 +246,19 @@ public class MovieServiceImpl implements MovieService {
         return "Delete response: " + rsp.getBody();
     }
 
+    @Override
+    public List<MovieDTO> getFavorite(String email) throws Exception {
+        User user = userRepository.findByEmail(email).orElseThrow();
+        if (user == null) {
+            throw new Exception("User not found");
+        }
+
+        List<Watchlist> watchlist = watchListRepositories.findByUser(user);
+        List<MovieDTO> movieDTOs = new ArrayList<>();
+        for (Watchlist watchlist1 : watchlist) {
+            MovieDTO movieDTO = getMovieById(watchlist1.getMovieId());
+            movieDTOs.add(movieDTO);
+        }
+        return movieDTOs;
+    }
 }

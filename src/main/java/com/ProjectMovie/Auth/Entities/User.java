@@ -21,7 +21,7 @@ import java.util.List;
 @AllArgsConstructor
 @Getter
 @Builder
-public class User implements UserDetails{
+public class User implements UserDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
@@ -42,18 +42,17 @@ public class User implements UserDetails{
     @Column(unique = true)
     @Email(message = "Email không hợp lệ")
     private String email;
-    
+
     @Enumerated(EnumType.STRING)
     private UserRole role;
 
-    @OneToOne(mappedBy = "user") 
+    @OneToOne(mappedBy = "user")
     private RefreshToken refreshToken;
 
     @Override
     public String getUsername() {
         return username;
     }
-
 
     @Override
     public String getPassword() {
@@ -83,5 +82,13 @@ public class User implements UserDetails{
     @Override
     public boolean isEnabled() {
         return true;
+    }
+
+    public int getUserId() {
+        return userId;
+    }
+
+    public String getName() {
+        return name;
     }
 }
