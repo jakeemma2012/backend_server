@@ -57,6 +57,8 @@ public class MovieContronller {
             @RequestPart String movieDTO)
             throws IOException, EmptyFileException {
 
+        MovieDTO dto = convertToDTO(movieDTO);
+
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.MULTIPART_FORM_DATA);
 
@@ -85,16 +87,14 @@ public class MovieContronller {
 
         HttpEntity<MultiValueMap<String, Object>> requestEntity = new HttpEntity<>(body, headers);
 
-        System.out.println(baseUrlApi + "/api/uploads_all");
+        System.out.println(baseUrlApi + "/api/uploads_all?" + dto.getTitle());
 
         String respString = restTemplate.postForObject(
-                baseUrlApi + "/api/uploads_all",
+                baseUrlApi + "/api/uploads_all?name=" + dto.getTitle(),
                 requestEntity,
                 String.class);
 
         System.out.println(respString);
-
-        MovieDTO dto = convertToDTO(movieDTO);
 
         return new ResponseEntity<>(movieService.addMovie(dto, respString), HttpStatus.CREATED);
     }
