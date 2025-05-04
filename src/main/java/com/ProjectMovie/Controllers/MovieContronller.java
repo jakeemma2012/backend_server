@@ -26,6 +26,7 @@ import org.springframework.web.client.RestTemplate;
 
 import java.io.IOException;
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/api/v1/movies")
@@ -124,15 +125,15 @@ public class MovieContronller {
     }
 
     @DeleteMapping("/delete/{movieId}")
-    public ResponseEntity<String> deleteMovieHandler(@PathVariable int movieId) throws IOException {
+    public ResponseEntity<Map<String, Object>> deleteMovieHandler(@PathVariable int movieId) throws IOException {
         return new ResponseEntity<>(movieService.deleteMovie(movieId), HttpStatus.OK);
     }
 
     @PutMapping("/update/{movieId}")
-    public ResponseEntity<MovieDTO> updateMovieHandler(@PathVariable int movieId, @RequestPart MultipartFile file,
-            @RequestPart String movieDTO) throws IOException {
+    public ResponseEntity<MovieDTO> updateMovieHandler(@PathVariable int movieId, @RequestPart String movieDTO)
+            throws IOException {
         MovieDTO dto = convertToDTO(movieDTO);
-        return new ResponseEntity<>(movieService.updateMovie(movieId, dto, file), HttpStatus.OK);
+        return new ResponseEntity<>(movieService.updateMovie(movieId, dto), HttpStatus.OK);
     }
 
     @PostMapping("/add_favorite")

@@ -96,6 +96,7 @@ public class AssetsController {
 
             String url = "";
             switch (nameTag) {
+
                 case "poster":
                     url = baseUrlApi + "/api/get_assets?linkImage="
                             + URLEncoder.encode(linkAssets, StandardCharsets.UTF_8) + "&nameTag=" + nameTag;
@@ -113,6 +114,7 @@ public class AssetsController {
                     url = baseUrlApi + "/api/get_assets?linkCast="
                             + URLEncoder.encode(linkAssets, StandardCharsets.UTF_8) + "&nameTag=" + nameTag;
                     break;
+
                 default:
                     return ResponseEntity.badRequest().body("Invalid nameTag: " + nameTag);
             }

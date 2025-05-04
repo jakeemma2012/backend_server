@@ -5,8 +5,8 @@ import com.ProjectMovie.dto.MovieDTO;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
-import java.net.http.HttpResponse;
 import java.util.List;
+import java.util.Map;
 
 public interface MovieService {
 
@@ -17,9 +17,9 @@ public interface MovieService {
 
     List<MovieDTO> getAllMovies();
 
-    MovieDTO updateMovie(int movieId, MovieDTO movieDTO, MultipartFile file) throws IOException;
+    MovieDTO updateMovie(int movieID, MovieDTO movieDTO) throws IOException;
 
-    String deleteMovie(int movieId) throws IOException;
+    Map<String, Object> deleteMovie(int movieId) throws IOException;
 
     List<MovieDTO> getFavorite(String email) throws Exception;
 }
