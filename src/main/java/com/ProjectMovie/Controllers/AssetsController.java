@@ -96,7 +96,6 @@ public class AssetsController {
 
             String url = "";
             switch (nameTag) {
-
                 case "poster":
                     url = baseUrlApi + "/api/get_assets?linkImage="
                             + URLEncoder.encode(linkAssets, StandardCharsets.UTF_8) + "&nameTag=" + nameTag;

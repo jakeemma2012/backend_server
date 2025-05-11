@@ -56,6 +56,7 @@ public class AuthService {
     public AuthResponse login(LoginRequest request) {
         String email = request.getEmail();
         String password = request.getPassword();
+
         UsernamePasswordAuthenticationToken authToken = new UsernamePasswordAuthenticationToken(email, password);
 
         User user = userRepository.findByEmail(request.getEmail())
@@ -67,6 +68,7 @@ public class AuthService {
         return AuthResponse.builder()
                 .accessToken(accessToken)
                 .refreshToken(refreshToken.getRefreshToken())
+                .userId(user.getUserId())
                 .name(user.getName())
                 .email(user.getEmail())
                 .role(user.getRole().name())
