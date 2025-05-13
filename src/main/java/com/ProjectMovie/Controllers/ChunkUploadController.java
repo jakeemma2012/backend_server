@@ -38,6 +38,7 @@ public class ChunkUploadController {
             @RequestPart("image") MultipartFile image,
             @RequestPart("video") MultipartFile video,
             @RequestPart("backdrop") MultipartFile backdrop,
+            @RequestPart("trailer") MultipartFile trailer,
             @RequestPart("movieDTO") String movieDTOJson) throws IOException {
 
         try {
@@ -46,6 +47,7 @@ public class ChunkUploadController {
             chunkUploadService.uploadAllChunks(image, "image");
             chunkUploadService.uploadAllChunks(video, "video");
             chunkUploadService.uploadAllChunks(backdrop, "backdrop");
+            chunkUploadService.uploadAllChunks(trailer, "trailer");
 
             System.out.println("HAS UPLOAD ALL CHUNKS");
 
@@ -62,6 +64,7 @@ public class ChunkUploadController {
             completeRequest.setImageName(image.getOriginalFilename());
             completeRequest.setVideoName(video.getOriginalFilename());
             completeRequest.setBackdropName(backdrop.getOriginalFilename());
+            completeRequest.setTrailerName(trailer.getOriginalFilename());
 
             HttpEntity<CompleteUploadRequest> requestEntity = new HttpEntity<>(completeRequest, headers);
 

@@ -15,7 +15,7 @@ public interface MovieService {
 
     List<MovieDTO> getAllMovies();
 
-    MovieDTO updateMovie(int movieID, MovieDTO movieDTO) throws IOException;
+    MovieDTO updateMovie(MovieDTO movieDTO) throws IOException;
 
     Map<String, Object> deleteMovie(int movieId) throws IOException;
 

@@ -10,4 +10,5 @@ public class CompleteUploadRequest {
     private String imageName;
     private String videoName;
     private String backdropName;
+    private String trailerName;
 }

@@ -75,4 +75,7 @@ public class Movie {
 
     @Column(nullable = true)
     private String backdropUrl;
+
+    @Column(nullable = true)
+    private String trailerUrl;
 }

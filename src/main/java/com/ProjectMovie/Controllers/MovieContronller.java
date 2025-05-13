@@ -87,11 +87,11 @@ public class MovieContronller {
         return new ResponseEntity<>(movieService.deleteMovie(movieId), HttpStatus.OK);
     }
 
-    @PutMapping("/update/{movieId}")
-    public ResponseEntity<MovieDTO> updateMovieHandler(@PathVariable int movieId, @RequestPart String movieDTO)
+    @PutMapping("/update")
+    public ResponseEntity<MovieDTO> updateMovieHandler(@RequestPart String movieDTO)
             throws IOException {
         MovieDTO dto = convertToDTO(movieDTO);
-        return new ResponseEntity<>(movieService.updateMovie(movieId, dto), HttpStatus.OK);
+        return new ResponseEntity<>(movieService.updateMovie(dto), HttpStatus.OK);
     }
 
     @PostMapping("/add_favorite")

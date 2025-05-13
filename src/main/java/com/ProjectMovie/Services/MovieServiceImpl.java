@@ -86,7 +86,8 @@ public class MovieServiceImpl implements MovieService {
                                 movieDTO.getDuration(),
                                 movieDTO.getImageUrl(),
                                 movieDTO.getVideoUrl(),
-                                movieDTO.getBackdropUrl());
+                                movieDTO.getBackdropUrl(),
+                                movieDTO.getTrailerUrl());
 
                 // 4. save -> saved
                 logger.debug("Saving movie to database");
@@ -107,7 +108,8 @@ public class MovieServiceImpl implements MovieService {
                                 savedMovie.getDuration(),
                                 savedMovie.getImageUrl(),
                                 savedMovie.getVideoUrl(),
-                                savedMovie.getBackdropUrl());
+                                savedMovie.getBackdropUrl(),
+                                savedMovie.getTrailerUrl());
 
                 logger.info("Completed addMovie process successfully");
 
@@ -134,7 +136,8 @@ public class MovieServiceImpl implements MovieService {
                                 movie.getDuration(),
                                 movie.getImageUrl(),
                                 movie.getVideoUrl(),
-                                movie.getBackdropUrl());
+                                movie.getBackdropUrl(),
+                                movie.getTrailerUrl());
                 // 4. nếu có thì trả về movieDTO
                 return movieDTO;
         }
@@ -161,7 +164,8 @@ public class MovieServiceImpl implements MovieService {
                                         movie.getDuration(),
                                         movie.getImageUrl(),
                                         movie.getVideoUrl(),
-                                        movie.getBackdropUrl());
+                                        movie.getBackdropUrl(),
+                                        movie.getTrailerUrl());
 
                         movieDTOs.add(movieDTO);
                 }
@@ -169,10 +173,11 @@ public class MovieServiceImpl implements MovieService {
         }
 
         @Override
-        public MovieDTO updateMovie(int movieID, MovieDTO movieDTO) throws IOException {
+        public MovieDTO updateMovie(MovieDTO movieDTO) throws IOException {
                 // 1. Kiểm tra tồn tại
-                Movie movie = movieRepository.findById(movieID)
-                                .orElseThrow(() -> new MovieNotFoundException("Không tìm thấy phim id: " + movieID));
+                Movie movie = movieRepository.findById(movieDTO.getMovieId())
+                                .orElseThrow(() -> new MovieNotFoundException(
+                                                "Không tìm thấy phim id: " + movieDTO.getMovieId()));
 
                 // 2. Cập nhật thông tin từ DTO vào entity
 
@@ -189,6 +194,7 @@ public class MovieServiceImpl implements MovieService {
                 movie.setImageUrl(movieDTO.getImageUrl());
                 movie.setVideoUrl(movieDTO.getVideoUrl());
                 movie.setBackdropUrl(movieDTO.getBackdropUrl());
+                movie.setTrailerUrl(movieDTO.getTrailerUrl());
 
                 // 3. Lưu lại vào DB
                 Movie updatedMovie = movieRepository.save(movie);
@@ -208,7 +214,8 @@ public class MovieServiceImpl implements MovieService {
                                 updatedMovie.getDuration(),
                                 updatedMovie.getImageUrl(),
                                 updatedMovie.getVideoUrl(),
-                                updatedMovie.getBackdropUrl());
+                                updatedMovie.getBackdropUrl(),
+                                updatedMovie.getTrailerUrl());
         }
 
         @Override
@@ -234,6 +241,7 @@ public class MovieServiceImpl implements MovieService {
                 movieRepository.deleteById(movieId);
                 Map<String, Object> responseBody = objectMapper.readValue(rsp.getBody(), new TypeReference<>() {
                 });
+
                 return Map.of(
                                 "status", "success",
                                 "message", "Delete response",
@@ -242,10 +250,7 @@ public class MovieServiceImpl implements MovieService {
 
         @Override
         public List<MovieDTO> getFavorite(String email) throws Exception {
-                User user = userRepository.findByEmail(email).orElseThrow();
-                if (user == null) {
-                        throw new Exception("User not found");
-                }
+                User user = userRepository.findByEmail(email).orElseThrow(() -> new Exception("User not found"));
 
                 List<Watchlist> watchlist = watchListRepositories.findByUser(user);
                 List<MovieDTO> movieDTOs = new ArrayList<>();

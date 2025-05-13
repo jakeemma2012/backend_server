@@ -113,7 +113,10 @@ public class AssetsController {
                     url = baseUrlApi + "/api/get_assets?linkCast="
                             + URLEncoder.encode(linkAssets, StandardCharsets.UTF_8) + "&nameTag=" + nameTag;
                     break;
-
+                case "trailer":
+                    linkAssets = linkAssets.replaceAll("%2F", "/");
+                    url = baseUrlApi + "/" + linkAssets + "/master.m3u8";
+                    break;
                 default:
                     return ResponseEntity.badRequest().body("Invalid nameTag: " + nameTag);
             }

@@ -631,3 +631,716 @@
 2025-05-13 10:42:56 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
 2025-05-13 10:42:56 [restartedMain] INFO  c.P.MovieBackendSpringBootApplication - Started MovieBackendSpringBootApplication in 0.57 seconds (process running for 10891.297)
 2025-05-13 10:42:56 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2025-05-13 11:01:52 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-13 11:01:52 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-05-13 11:01:52 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-05-13 11:02:01 [http-nio-8080-exec-3] INFO  c.P.Services.MovieServiceImpl - Starting addMovie process
+2025-05-13 11:02:01 [http-nio-8080-exec-3] DEBUG c.P.Services.MovieServiceImpl - Mapping DTO to Movie entity
+2025-05-13 11:02:01 [http-nio-8080-exec-3] DEBUG c.P.Services.MovieServiceImpl - Saving movie to database
+2025-05-13 11:02:01 [http-nio-8080-exec-3] INFO  c.P.Services.MovieServiceImpl - Completed addMovie process successfully
+2025-05-13 11:14:30 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-13 11:14:30 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-21 - Shutdown initiated...
+2025-05-13 11:14:30 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-21 - Shutdown completed.
+2025-05-13 14:44:36 [restartedMain] INFO  c.P.MovieBackendSpringBootApplication - Starting MovieBackendSpringBootApplication using Java 17.0.12 with PID 14892 (C:\Users\Admin\Desktop\BaseMent\MovieBackendSpringBoot\target\classes started by Admin in C:\Users\Admin\Desktop\BaseMent\MovieBackendSpringBoot)
+2025-05-13 14:44:36 [restartedMain] DEBUG c.P.MovieBackendSpringBootApplication - Running with Spring Boot v3.2.3, Spring v6.1.4
+2025-05-13 14:44:36 [restartedMain] INFO  c.P.MovieBackendSpringBootApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-13 14:44:36 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-05-13 14:44:36 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-05-13 14:44:37 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-13 14:44:37 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 140 ms. Found 5 JPA repository interfaces.
+2025-05-13 14:44:39 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-05-13 14:44:39 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-13 14:44:39 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2025-05-13 14:44:39 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-13 14:44:39 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3429 ms
+2025-05-13 14:44:39 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-13 14:44:40 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2025-05-13 14:44:40 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-05-13 14:44:40 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-13 14:44:40 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-05-13 14:44:40 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.mariadb.jdbc.MariaDbConnection@623af5aa
+2025-05-13 14:44:40 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-05-13 14:44:40 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-13 14:44:43 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-13 14:44:43 [restartedMain] DEBUG c.P.Auth.Services.AuthFilterService - Filter 'authFilterService' configured for use
+2025-05-13 14:44:44 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-13 14:44:44 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5579dc3c, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@75f937d, org.springframework.security.web.context.SecurityContextHolderFilter@74a4d16b, org.springframework.security.web.header.HeaderWriterFilter@5dc74f78, org.springframework.web.filter.CorsFilter@6d462fc3, org.springframework.security.web.authentication.logout.LogoutFilter@14a23de0, com.ProjectMovie.Auth.Services.AuthFilterService@23ef8ba1, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@70fe70c6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3fbf59b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1b36e40d, org.springframework.security.web.session.SessionManagementFilter@4dc8e41c, org.springframework.security.web.access.ExceptionTranslationFilter@e42b68a, org.springframework.security.web.access.intercept.AuthorizationFilter@43ac9df]
+2025-05-13 14:44:45 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-05-13 14:44:45 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2025-05-13 14:44:45 [restartedMain] INFO  c.P.MovieBackendSpringBootApplication - Started MovieBackendSpringBootApplication in 10.185 seconds (process running for 11.061)
+2025-05-13 14:45:29 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-13 14:45:29 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-05-13 14:45:29 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-05-13 17:08:09 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h44m57s997ms514µs800ns).
+2025-05-13 17:25:28 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-13 17:25:28 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-05-13 17:25:28 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-05-13 20:35:00 [restartedMain] INFO  c.P.MovieBackendSpringBootApplication - Starting MovieBackendSpringBootApplication using Java 17.0.12 with PID 17844 (C:\Users\Admin\Desktop\BaseMent\MovieBackendSpringBoot\target\classes started by Admin in C:\Users\Admin\Desktop\BaseMent\MovieBackendSpringBoot)
+2025-05-13 20:35:00 [restartedMain] DEBUG c.P.MovieBackendSpringBootApplication - Running with Spring Boot v3.2.3, Spring v6.1.4
+2025-05-13 20:35:00 [restartedMain] INFO  c.P.MovieBackendSpringBootApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-13 20:35:00 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-05-13 20:35:00 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-05-13 20:35:00 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-13 20:35:00 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 63 ms. Found 5 JPA repository interfaces.
+2025-05-13 20:35:01 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-05-13 20:35:01 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-13 20:35:01 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2025-05-13 20:35:01 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-13 20:35:01 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1500 ms
+2025-05-13 20:35:01 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-13 20:35:01 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2025-05-13 20:35:02 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-05-13 20:35:02 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-13 20:35:02 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-05-13 20:35:02 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.mariadb.jdbc.MariaDbConnection@222ed99f
+2025-05-13 20:35:02 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-05-13 20:35:02 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-13 20:35:03 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-13 20:35:03 [restartedMain] DEBUG c.P.Auth.Services.AuthFilterService - Filter 'authFilterService' configured for use
+2025-05-13 20:35:03 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-13 20:35:04 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3d939e15, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@67d11995, org.springframework.security.web.context.SecurityContextHolderFilter@1e3bd655, org.springframework.security.web.header.HeaderWriterFilter@2e67e823, org.springframework.web.filter.CorsFilter@2f61aeb4, org.springframework.security.web.authentication.logout.LogoutFilter@456cf49c, com.ProjectMovie.Auth.Services.AuthFilterService@43a3b726, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@36e8c5a9, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@541c7bd2, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@53e754ea, org.springframework.security.web.session.SessionManagementFilter@2713141, org.springframework.security.web.access.ExceptionTranslationFilter@1a1fe6a, org.springframework.security.web.access.intercept.AuthorizationFilter@30dd58ba]
+2025-05-13 20:35:04 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-05-13 20:35:04 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2025-05-13 20:35:04 [restartedMain] INFO  c.P.MovieBackendSpringBootApplication - Started MovieBackendSpringBootApplication in 4.742 seconds (process running for 5.33)
+2025-05-13 20:35:17 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-13 20:35:17 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-05-13 20:35:17 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-05-13 20:46:11 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-13 20:46:11 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-05-13 20:46:11 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-05-13 20:47:57 [restartedMain] INFO  c.P.MovieBackendSpringBootApplication - Starting MovieBackendSpringBootApplication using Java 17.0.12 with PID 5568 (C:\Users\Admin\Desktop\BaseMent\MovieBackendSpringBoot\target\classes started by Admin in C:\Users\Admin\Desktop\BaseMent\MovieBackendSpringBoot)
+2025-05-13 20:47:57 [restartedMain] DEBUG c.P.MovieBackendSpringBootApplication - Running with Spring Boot v3.2.3, Spring v6.1.4
+2025-05-13 20:47:57 [restartedMain] INFO  c.P.MovieBackendSpringBootApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-13 20:47:57 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-05-13 20:47:57 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-05-13 20:47:58 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-13 20:47:58 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 58 ms. Found 5 JPA repository interfaces.
+2025-05-13 20:47:58 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-05-13 20:47:58 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-13 20:47:58 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2025-05-13 20:47:58 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-13 20:47:58 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1574 ms
+2025-05-13 20:47:59 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-13 20:47:59 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2025-05-13 20:47:59 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-05-13 20:47:59 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-13 20:47:59 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-05-13 20:47:59 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.mariadb.jdbc.MariaDbConnection@623af5aa
+2025-05-13 20:47:59 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-05-13 20:47:59 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-13 20:48:00 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-13 20:48:00 [restartedMain] DEBUG c.P.Auth.Services.AuthFilterService - Filter 'authFilterService' configured for use
+2025-05-13 20:48:01 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-13 20:48:01 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5579dc3c, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@75f937d, org.springframework.security.web.context.SecurityContextHolderFilter@74a4d16b, org.springframework.security.web.header.HeaderWriterFilter@5dc74f78, org.springframework.web.filter.CorsFilter@6d462fc3, org.springframework.security.web.authentication.logout.LogoutFilter@14a23de0, com.ProjectMovie.Auth.Services.AuthFilterService@23ef8ba1, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@70fe70c6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3fbf59b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1b36e40d, org.springframework.security.web.session.SessionManagementFilter@4dc8e41c, org.springframework.security.web.access.ExceptionTranslationFilter@e42b68a, org.springframework.security.web.access.intercept.AuthorizationFilter@43ac9df]
+2025-05-13 20:48:01 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-05-13 20:48:01 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2025-05-13 20:48:01 [restartedMain] INFO  c.P.MovieBackendSpringBootApplication - Started MovieBackendSpringBootApplication in 4.927 seconds (process running for 5.255)
+2025-05-13 20:48:04 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-13 20:48:04 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-05-13 20:48:04 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-05-13 21:07:31 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
+2025-05-13 21:07:31 [Thread-5] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-13 21:07:31 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-05-13 21:07:31 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-05-13 21:07:31 [restartedMain] INFO  c.P.MovieBackendSpringBootApplication - Starting MovieBackendSpringBootApplication using Java 17.0.12 with PID 5568 (C:\Users\Admin\Desktop\BaseMent\MovieBackendSpringBoot\target\classes started by Admin in C:\Users\Admin\Desktop\BaseMent\MovieBackendSpringBoot)
+2025-05-13 21:07:31 [restartedMain] DEBUG c.P.MovieBackendSpringBootApplication - Running with Spring Boot v3.2.3, Spring v6.1.4
+2025-05-13 21:07:31 [restartedMain] INFO  c.P.MovieBackendSpringBootApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-13 21:07:32 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-13 21:07:32 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 23 ms. Found 5 JPA repository interfaces.
+2025-05-13 21:07:32 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-05-13 21:07:32 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-13 21:07:32 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2025-05-13 21:07:32 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-13 21:07:32 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 340 ms
+2025-05-13 21:07:32 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-13 21:07:32 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-05-13 21:07:32 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-13 21:07:32 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2025-05-13 21:07:32 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Added connection org.mariadb.jdbc.MariaDbConnection@396b13df
+2025-05-13 21:07:32 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2025-05-13 21:07:32 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-13 21:07:32 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-13 21:07:32 [restartedMain] DEBUG c.P.Auth.Services.AuthFilterService - Filter 'authFilterService' configured for use
+2025-05-13 21:07:32 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-13 21:07:32 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2616387b, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2f9c3be4, org.springframework.security.web.context.SecurityContextHolderFilter@2148579b, org.springframework.security.web.header.HeaderWriterFilter@4f2ad73, org.springframework.web.filter.CorsFilter@51b12fff, org.springframework.security.web.authentication.logout.LogoutFilter@23e54cd9, com.ProjectMovie.Auth.Services.AuthFilterService@54a6b673, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@10275242, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@12ffc00, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@73c72e25, org.springframework.security.web.session.SessionManagementFilter@49a107a9, org.springframework.security.web.access.ExceptionTranslationFilter@286327af, org.springframework.security.web.access.intercept.AuthorizationFilter@774b8d76]
+2025-05-13 21:07:32 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-05-13 21:07:32 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2025-05-13 21:07:32 [restartedMain] INFO  c.P.MovieBackendSpringBootApplication - Started MovieBackendSpringBootApplication in 0.988 seconds (process running for 1176.268)
+2025-05-13 21:07:32 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2025-05-13 21:07:43 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
+2025-05-13 21:07:43 [Thread-7] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-13 21:07:43 [Thread-7] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
+2025-05-13 21:07:43 [Thread-7] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
+2025-05-13 21:07:43 [restartedMain] INFO  c.P.MovieBackendSpringBootApplication - Starting MovieBackendSpringBootApplication using Java 17.0.12 with PID 5568 (C:\Users\Admin\Desktop\BaseMent\MovieBackendSpringBoot\target\classes started by Admin in C:\Users\Admin\Desktop\BaseMent\MovieBackendSpringBoot)
+2025-05-13 21:07:43 [restartedMain] DEBUG c.P.MovieBackendSpringBootApplication - Running with Spring Boot v3.2.3, Spring v6.1.4
+2025-05-13 21:07:43 [restartedMain] INFO  c.P.MovieBackendSpringBootApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-13 21:07:43 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-13 21:07:43 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 16 ms. Found 5 JPA repository interfaces.
+2025-05-13 21:07:43 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-05-13 21:07:43 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-13 21:07:43 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2025-05-13 21:07:43 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-13 21:07:43 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 272 ms
+2025-05-13 21:07:43 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-13 21:07:43 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-05-13 21:07:43 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-13 21:07:43 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Starting...
+2025-05-13 21:07:44 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Added connection org.mariadb.jdbc.MariaDbConnection@2eee8b61
+2025-05-13 21:07:44 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Start completed.
+2025-05-13 21:07:44 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-13 21:07:44 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-13 21:07:44 [restartedMain] DEBUG c.P.Auth.Services.AuthFilterService - Filter 'authFilterService' configured for use
+2025-05-13 21:07:44 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-13 21:07:44 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7c84a464, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7b90b18b, org.springframework.security.web.context.SecurityContextHolderFilter@56549521, org.springframework.security.web.header.HeaderWriterFilter@2be80504, org.springframework.web.filter.CorsFilter@4daaaba2, org.springframework.security.web.authentication.logout.LogoutFilter@46582966, com.ProjectMovie.Auth.Services.AuthFilterService@7dabb826, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@49d742cd, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@227caed6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@184b9c39, org.springframework.security.web.session.SessionManagementFilter@7c3d4011, org.springframework.security.web.access.ExceptionTranslationFilter@45369f7, org.springframework.security.web.access.intercept.AuthorizationFilter@72a7c82f]
+2025-05-13 21:07:44 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-05-13 21:07:44 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2025-05-13 21:07:44 [restartedMain] INFO  c.P.MovieBackendSpringBootApplication - Started MovieBackendSpringBootApplication in 0.849 seconds (process running for 1187.809)
+2025-05-13 21:07:44 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2025-05-13 21:08:05 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
+2025-05-13 21:08:05 [Thread-11] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-13 21:08:05 [Thread-11] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown initiated...
+2025-05-13 21:08:05 [Thread-11] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown completed.
+2025-05-13 21:08:05 [restartedMain] INFO  c.P.MovieBackendSpringBootApplication - Starting MovieBackendSpringBootApplication using Java 17.0.12 with PID 5568 (C:\Users\Admin\Desktop\BaseMent\MovieBackendSpringBoot\target\classes started by Admin in C:\Users\Admin\Desktop\BaseMent\MovieBackendSpringBoot)
+2025-05-13 21:08:05 [restartedMain] DEBUG c.P.MovieBackendSpringBootApplication - Running with Spring Boot v3.2.3, Spring v6.1.4
+2025-05-13 21:08:05 [restartedMain] INFO  c.P.MovieBackendSpringBootApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-13 21:08:05 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-13 21:08:05 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 17 ms. Found 5 JPA repository interfaces.
+2025-05-13 21:08:05 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-05-13 21:08:05 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-13 21:08:05 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2025-05-13 21:08:05 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-13 21:08:05 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 270 ms
+2025-05-13 21:08:05 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-13 21:08:05 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-05-13 21:08:05 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-13 21:08:05 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Starting...
+2025-05-13 21:08:05 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-4 - Added connection org.mariadb.jdbc.MariaDbConnection@2be706d0
+2025-05-13 21:08:05 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Start completed.
+2025-05-13 21:08:05 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-13 21:08:05 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-13 21:08:05 [restartedMain] DEBUG c.P.Auth.Services.AuthFilterService - Filter 'authFilterService' configured for use
+2025-05-13 21:08:05 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-13 21:08:06 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4b40afd9, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@26ea77f9, org.springframework.security.web.context.SecurityContextHolderFilter@4cb3c931, org.springframework.security.web.header.HeaderWriterFilter@13ae5fa8, org.springframework.web.filter.CorsFilter@30f74c8a, org.springframework.security.web.authentication.logout.LogoutFilter@42f5e65e, com.ProjectMovie.Auth.Services.AuthFilterService@7783aeda, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4f6855d7, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2eda008d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1f44611b, org.springframework.security.web.session.SessionManagementFilter@35216300, org.springframework.security.web.access.ExceptionTranslationFilter@2a7525bd, org.springframework.security.web.access.intercept.AuthorizationFilter@319e6a28]
+2025-05-13 21:08:06 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-05-13 21:08:06 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2025-05-13 21:08:06 [restartedMain] INFO  c.P.MovieBackendSpringBootApplication - Started MovieBackendSpringBootApplication in 0.708 seconds (process running for 1209.415)
+2025-05-13 21:08:06 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2025-05-13 21:08:46 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-05-13 21:08:46 [Thread-15] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-13 21:08:46 [Thread-15] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Shutdown initiated...
+2025-05-13 21:08:46 [Thread-15] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Shutdown completed.
+2025-05-13 21:08:46 [restartedMain] INFO  c.P.MovieBackendSpringBootApplication - Starting MovieBackendSpringBootApplication using Java 17.0.12 with PID 5568 (C:\Users\Admin\Desktop\BaseMent\MovieBackendSpringBoot\target\classes started by Admin in C:\Users\Admin\Desktop\BaseMent\MovieBackendSpringBoot)
+2025-05-13 21:08:46 [restartedMain] DEBUG c.P.MovieBackendSpringBootApplication - Running with Spring Boot v3.2.3, Spring v6.1.4
+2025-05-13 21:08:46 [restartedMain] INFO  c.P.MovieBackendSpringBootApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-13 21:08:46 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-13 21:08:46 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 13 ms. Found 5 JPA repository interfaces.
+2025-05-13 21:08:46 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-05-13 21:08:46 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-13 21:08:46 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2025-05-13 21:08:46 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-13 21:08:46 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 224 ms
+2025-05-13 21:08:46 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-13 21:08:46 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-05-13 21:08:46 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-13 21:08:46 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Starting...
+2025-05-13 21:08:46 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection org.mariadb.jdbc.MariaDbConnection@3b1f239e
+2025-05-13 21:08:46 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Start completed.
+2025-05-13 21:08:46 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-13 21:08:46 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-13 21:08:46 [restartedMain] DEBUG c.P.Auth.Services.AuthFilterService - Filter 'authFilterService' configured for use
+2025-05-13 21:08:46 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-13 21:08:47 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2492faae, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@196d9eab, org.springframework.security.web.context.SecurityContextHolderFilter@34045467, org.springframework.security.web.header.HeaderWriterFilter@3f5e587, org.springframework.web.filter.CorsFilter@4e3be3f7, org.springframework.security.web.authentication.logout.LogoutFilter@5971aa5, com.ProjectMovie.Auth.Services.AuthFilterService@1ac68e36, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4b0bee1a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@67fef321, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4abfdb72, org.springframework.security.web.session.SessionManagementFilter@15ac3004, org.springframework.security.web.access.ExceptionTranslationFilter@51d5c4b1, org.springframework.security.web.access.intercept.AuthorizationFilter@10fd1c6]
+2025-05-13 21:08:47 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-05-13 21:08:47 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2025-05-13 21:08:47 [restartedMain] INFO  c.P.MovieBackendSpringBootApplication - Started MovieBackendSpringBootApplication in 0.665 seconds (process running for 1250.404)
+2025-05-13 21:08:47 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2025-05-13 21:08:52 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
+2025-05-13 21:08:52 [Thread-19] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-13 21:08:52 [Thread-19] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Shutdown initiated...
+2025-05-13 21:08:52 [Thread-19] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Shutdown completed.
+2025-05-13 21:08:52 [restartedMain] INFO  c.P.MovieBackendSpringBootApplication - Starting MovieBackendSpringBootApplication using Java 17.0.12 with PID 5568 (C:\Users\Admin\Desktop\BaseMent\MovieBackendSpringBoot\target\classes started by Admin in C:\Users\Admin\Desktop\BaseMent\MovieBackendSpringBoot)
+2025-05-13 21:08:52 [restartedMain] DEBUG c.P.MovieBackendSpringBootApplication - Running with Spring Boot v3.2.3, Spring v6.1.4
+2025-05-13 21:08:52 [restartedMain] INFO  c.P.MovieBackendSpringBootApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-13 21:08:52 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-13 21:08:52 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 15 ms. Found 5 JPA repository interfaces.
+2025-05-13 21:08:52 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-05-13 21:08:52 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-13 21:08:52 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2025-05-13 21:08:52 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-13 21:08:52 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 231 ms
+2025-05-13 21:08:52 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-13 21:08:52 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-05-13 21:08:52 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-13 21:08:52 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-6 - Starting...
+2025-05-13 21:08:52 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-6 - Added connection org.mariadb.jdbc.MariaDbConnection@1eb8f1a3
+2025-05-13 21:08:52 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-6 - Start completed.
+2025-05-13 21:08:52 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-13 21:08:53 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-13 21:08:53 [restartedMain] DEBUG c.P.Auth.Services.AuthFilterService - Filter 'authFilterService' configured for use
+2025-05-13 21:08:53 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-13 21:08:53 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2420b42, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@53dbb71a, org.springframework.security.web.context.SecurityContextHolderFilter@3b627d47, org.springframework.security.web.header.HeaderWriterFilter@6e9c8dad, org.springframework.web.filter.CorsFilter@4fd4af12, org.springframework.security.web.authentication.logout.LogoutFilter@2fefd4e4, com.ProjectMovie.Auth.Services.AuthFilterService@3302e8d7, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5e6d86f2, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@54969977, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@729220f9, org.springframework.security.web.session.SessionManagementFilter@1989507a, org.springframework.security.web.access.ExceptionTranslationFilter@21cfedf, org.springframework.security.web.access.intercept.AuthorizationFilter@7d3ae21b]
+2025-05-13 21:08:53 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-05-13 21:08:53 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2025-05-13 21:08:53 [restartedMain] INFO  c.P.MovieBackendSpringBootApplication - Started MovieBackendSpringBootApplication in 0.623 seconds (process running for 1256.611)
+2025-05-13 21:08:53 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2025-05-13 21:11:54 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-13 21:11:54 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-05-13 21:11:54 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-05-13 21:18:16 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-13 21:18:16 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-6 - Shutdown initiated...
+2025-05-13 21:18:16 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-6 - Shutdown completed.
+2025-05-13 21:18:30 [restartedMain] INFO  c.P.MovieBackendSpringBootApplication - Starting MovieBackendSpringBootApplication using Java 17.0.12 with PID 320 (C:\Users\Admin\Desktop\BaseMent\MovieBackendSpringBoot\target\classes started by Admin in C:\Users\Admin\Desktop\BaseMent\MovieBackendSpringBoot)
+2025-05-13 21:18:30 [restartedMain] DEBUG c.P.MovieBackendSpringBootApplication - Running with Spring Boot v3.2.3, Spring v6.1.4
+2025-05-13 21:18:30 [restartedMain] INFO  c.P.MovieBackendSpringBootApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-13 21:18:30 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-05-13 21:18:30 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-05-13 21:18:30 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-13 21:18:31 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 56 ms. Found 5 JPA repository interfaces.
+2025-05-13 21:18:31 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-05-13 21:18:31 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-13 21:18:31 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2025-05-13 21:18:31 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-13 21:18:31 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1471 ms
+2025-05-13 21:18:32 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-13 21:18:32 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2025-05-13 21:18:32 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-05-13 21:18:32 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-13 21:18:32 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-05-13 21:18:32 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.mariadb.jdbc.MariaDbConnection@3ed5c236
+2025-05-13 21:18:32 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-05-13 21:18:32 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-13 21:18:33 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-13 21:18:33 [restartedMain] DEBUG c.P.Auth.Services.AuthFilterService - Filter 'authFilterService' configured for use
+2025-05-13 21:18:34 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-13 21:18:34 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@a7954fe, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2dbd2c0d, org.springframework.security.web.context.SecurityContextHolderFilter@5cf3b2d8, org.springframework.security.web.header.HeaderWriterFilter@7ff31a44, org.springframework.web.filter.CorsFilter@75abf119, org.springframework.security.web.authentication.logout.LogoutFilter@24eb85e7, com.ProjectMovie.Auth.Services.AuthFilterService@b8e442, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5acf3cfd, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@25429eeb, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@561c13e8, org.springframework.security.web.session.SessionManagementFilter@2f43f147, org.springframework.security.web.access.ExceptionTranslationFilter@16f2e641, org.springframework.security.web.access.intercept.AuthorizationFilter@12b6bab6]
+2025-05-13 21:18:34 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-05-13 21:18:34 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2025-05-13 21:18:34 [restartedMain] INFO  c.P.MovieBackendSpringBootApplication - Started MovieBackendSpringBootApplication in 4.889 seconds (process running for 5.255)
+2025-05-13 21:18:45 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-13 21:18:45 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-05-13 21:18:45 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2025-05-13 21:58:33 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
+2025-05-13 21:58:33 [Thread-5] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-13 21:58:33 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-05-13 21:58:33 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-05-13 21:58:34 [restartedMain] INFO  c.P.MovieBackendSpringBootApplication - Starting MovieBackendSpringBootApplication using Java 17.0.12 with PID 320 (C:\Users\Admin\Desktop\BaseMent\MovieBackendSpringBoot\target\classes started by Admin in C:\Users\Admin\Desktop\BaseMent\MovieBackendSpringBoot)
+2025-05-13 21:58:34 [restartedMain] DEBUG c.P.MovieBackendSpringBootApplication - Running with Spring Boot v3.2.3, Spring v6.1.4
+2025-05-13 21:58:34 [restartedMain] INFO  c.P.MovieBackendSpringBootApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-13 21:58:34 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-13 21:58:34 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 44 ms. Found 5 JPA repository interfaces.
+2025-05-13 21:58:34 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-05-13 21:58:34 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-13 21:58:34 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2025-05-13 21:58:34 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-13 21:58:34 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 810 ms
+2025-05-13 21:58:34 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-13 21:58:34 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-05-13 21:58:34 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-13 21:58:34 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2025-05-13 21:58:35 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Added connection org.mariadb.jdbc.MariaDbConnection@8e4923d
+2025-05-13 21:58:35 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2025-05-13 21:58:35 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-13 21:58:35 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-13 21:58:35 [restartedMain] DEBUG c.P.Auth.Services.AuthFilterService - Filter 'authFilterService' configured for use
+2025-05-13 21:58:35 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-13 21:58:35 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@79d56af0, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7333ba5, org.springframework.security.web.context.SecurityContextHolderFilter@73012dfe, org.springframework.security.web.header.HeaderWriterFilter@eabf8a, org.springframework.web.filter.CorsFilter@52e3f6e2, org.springframework.security.web.authentication.logout.LogoutFilter@12ed8ea9, com.ProjectMovie.Auth.Services.AuthFilterService@7eb356c9, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@26fd0400, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@733ef9ba, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@294cbf66, org.springframework.security.web.session.SessionManagementFilter@fc293c3, org.springframework.security.web.access.ExceptionTranslationFilter@1dd90e10, org.springframework.security.web.access.intercept.AuthorizationFilter@580994fc]
+2025-05-13 21:58:35 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-05-13 21:58:35 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2025-05-13 21:58:35 [restartedMain] INFO  c.P.MovieBackendSpringBootApplication - Started MovieBackendSpringBootApplication in 1.58 seconds (process running for 2406.041)
+2025-05-13 21:58:35 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2025-05-13 21:58:43 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
+2025-05-13 21:58:43 [Thread-7] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-13 21:58:43 [Thread-7] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
+2025-05-13 21:58:43 [Thread-7] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
+2025-05-13 21:58:43 [restartedMain] INFO  c.P.MovieBackendSpringBootApplication - Starting MovieBackendSpringBootApplication using Java 17.0.12 with PID 320 (C:\Users\Admin\Desktop\BaseMent\MovieBackendSpringBoot\target\classes started by Admin in C:\Users\Admin\Desktop\BaseMent\MovieBackendSpringBoot)
+2025-05-13 21:58:43 [restartedMain] DEBUG c.P.MovieBackendSpringBootApplication - Running with Spring Boot v3.2.3, Spring v6.1.4
+2025-05-13 21:58:43 [restartedMain] INFO  c.P.MovieBackendSpringBootApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-13 21:58:43 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-13 21:58:43 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 14 ms. Found 5 JPA repository interfaces.
+2025-05-13 21:58:43 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-05-13 21:58:43 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-13 21:58:43 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2025-05-13 21:58:43 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-13 21:58:43 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 252 ms
+2025-05-13 21:58:43 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-13 21:58:43 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-05-13 21:58:43 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-13 21:58:43 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Starting...
+2025-05-13 21:58:43 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Added connection org.mariadb.jdbc.MariaDbConnection@24d9f2a2
+2025-05-13 21:58:43 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Start completed.
+2025-05-13 21:58:43 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-13 21:58:43 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-13 21:58:43 [restartedMain] DEBUG c.P.Auth.Services.AuthFilterService - Filter 'authFilterService' configured for use
+2025-05-13 21:58:43 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-13 21:58:43 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@10c1c37b, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@ade421d, org.springframework.security.web.context.SecurityContextHolderFilter@3b4c8493, org.springframework.security.web.header.HeaderWriterFilter@5fcd1e10, org.springframework.web.filter.CorsFilter@44d0f39f, org.springframework.security.web.authentication.logout.LogoutFilter@cb2d6e8, com.ProjectMovie.Auth.Services.AuthFilterService@5dbf09e5, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3cacb2c2, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@b2606d9, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@55a855f7, org.springframework.security.web.session.SessionManagementFilter@1dd8b46e, org.springframework.security.web.access.ExceptionTranslationFilter@2654266e, org.springframework.security.web.access.intercept.AuthorizationFilter@6e7a8ba3]
+2025-05-13 21:58:44 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-05-13 21:58:44 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2025-05-13 21:58:44 [restartedMain] INFO  c.P.MovieBackendSpringBootApplication - Started MovieBackendSpringBootApplication in 0.808 seconds (process running for 2414.477)
+2025-05-13 21:58:44 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2025-05-13 21:58:54 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
+2025-05-13 21:58:54 [Thread-11] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-13 21:58:54 [Thread-11] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown initiated...
+2025-05-13 21:58:54 [Thread-11] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown completed.
+2025-05-13 21:58:54 [restartedMain] INFO  c.P.MovieBackendSpringBootApplication - Starting MovieBackendSpringBootApplication using Java 17.0.12 with PID 320 (C:\Users\Admin\Desktop\BaseMent\MovieBackendSpringBoot\target\classes started by Admin in C:\Users\Admin\Desktop\BaseMent\MovieBackendSpringBoot)
+2025-05-13 21:58:54 [restartedMain] DEBUG c.P.MovieBackendSpringBootApplication - Running with Spring Boot v3.2.3, Spring v6.1.4
+2025-05-13 21:58:54 [restartedMain] INFO  c.P.MovieBackendSpringBootApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-13 21:58:54 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-13 21:58:54 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 15 ms. Found 5 JPA repository interfaces.
+2025-05-13 21:58:54 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-05-13 21:58:54 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-13 21:58:54 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2025-05-13 21:58:54 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-13 21:58:54 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 240 ms
+2025-05-13 21:58:55 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-13 21:58:55 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-05-13 21:58:55 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-13 21:58:55 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Starting...
+2025-05-13 21:58:55 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-4 - Added connection org.mariadb.jdbc.MariaDbConnection@2671ec1b
+2025-05-13 21:58:55 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Start completed.
+2025-05-13 21:58:55 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-13 21:58:55 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-13 21:58:55 [restartedMain] DEBUG c.P.Auth.Services.AuthFilterService - Filter 'authFilterService' configured for use
+2025-05-13 21:58:55 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-13 21:58:55 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@17d76fee, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2282d942, org.springframework.security.web.context.SecurityContextHolderFilter@7346ef6b, org.springframework.security.web.header.HeaderWriterFilter@750a7b69, org.springframework.web.filter.CorsFilter@24c9f683, org.springframework.security.web.authentication.logout.LogoutFilter@3340d412, com.ProjectMovie.Auth.Services.AuthFilterService@7ac6bd58, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6ebfd8a4, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@48483729, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@53580644, org.springframework.security.web.session.SessionManagementFilter@648b68b9, org.springframework.security.web.access.ExceptionTranslationFilter@458b1dea, org.springframework.security.web.access.intercept.AuthorizationFilter@2a52ca05]
+2025-05-13 21:58:55 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-05-13 21:58:55 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2025-05-13 21:58:55 [restartedMain] INFO  c.P.MovieBackendSpringBootApplication - Started MovieBackendSpringBootApplication in 0.635 seconds (process running for 2425.789)
+2025-05-13 21:58:55 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2025-05-13 22:00:50 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-05-13 22:00:50 [Thread-15] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-13 22:00:50 [Thread-15] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Shutdown initiated...
+2025-05-13 22:00:50 [Thread-15] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Shutdown completed.
+2025-05-13 22:00:50 [restartedMain] INFO  c.P.MovieBackendSpringBootApplication - Starting MovieBackendSpringBootApplication using Java 17.0.12 with PID 320 (C:\Users\Admin\Desktop\BaseMent\MovieBackendSpringBoot\target\classes started by Admin in C:\Users\Admin\Desktop\BaseMent\MovieBackendSpringBoot)
+2025-05-13 22:00:50 [restartedMain] DEBUG c.P.MovieBackendSpringBootApplication - Running with Spring Boot v3.2.3, Spring v6.1.4
+2025-05-13 22:00:50 [restartedMain] INFO  c.P.MovieBackendSpringBootApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-13 22:00:50 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-13 22:00:50 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 17 ms. Found 5 JPA repository interfaces.
+2025-05-13 22:00:50 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-05-13 22:00:50 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-13 22:00:50 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2025-05-13 22:00:50 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-13 22:00:50 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 255 ms
+2025-05-13 22:00:50 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-13 22:00:50 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-05-13 22:00:50 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-13 22:00:50 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Starting...
+2025-05-13 22:00:50 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection org.mariadb.jdbc.MariaDbConnection@381c52fc
+2025-05-13 22:00:50 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Start completed.
+2025-05-13 22:00:50 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-13 22:00:50 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-13 22:00:50 [restartedMain] DEBUG c.P.Auth.Services.AuthFilterService - Filter 'authFilterService' configured for use
+2025-05-13 22:00:50 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-13 22:00:50 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@63c82f55, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@24e03687, org.springframework.security.web.context.SecurityContextHolderFilter@73ad6d1d, org.springframework.security.web.header.HeaderWriterFilter@7d0a7bc6, org.springframework.web.filter.CorsFilter@1995a459, org.springframework.security.web.authentication.logout.LogoutFilter@2c7d7251, com.ProjectMovie.Auth.Services.AuthFilterService@167f1a9f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7e86a61a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@50fc3647, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@46bf388e, org.springframework.security.web.session.SessionManagementFilter@8fd88a5, org.springframework.security.web.access.ExceptionTranslationFilter@5e7a6b91, org.springframework.security.web.access.intercept.AuthorizationFilter@56fffb0b]
+2025-05-13 22:00:51 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-05-13 22:00:51 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2025-05-13 22:00:51 [restartedMain] INFO  c.P.MovieBackendSpringBootApplication - Started MovieBackendSpringBootApplication in 0.684 seconds (process running for 2541.476)
+2025-05-13 22:00:51 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2025-05-13 22:01:02 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-05-13 22:01:02 [Thread-19] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-13 22:01:02 [Thread-19] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Shutdown initiated...
+2025-05-13 22:01:02 [Thread-19] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Shutdown completed.
+2025-05-13 22:01:02 [restartedMain] INFO  c.P.MovieBackendSpringBootApplication - Starting MovieBackendSpringBootApplication using Java 17.0.12 with PID 320 (C:\Users\Admin\Desktop\BaseMent\MovieBackendSpringBoot\target\classes started by Admin in C:\Users\Admin\Desktop\BaseMent\MovieBackendSpringBoot)
+2025-05-13 22:01:02 [restartedMain] DEBUG c.P.MovieBackendSpringBootApplication - Running with Spring Boot v3.2.3, Spring v6.1.4
+2025-05-13 22:01:02 [restartedMain] INFO  c.P.MovieBackendSpringBootApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-13 22:01:02 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-13 22:01:02 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 14 ms. Found 5 JPA repository interfaces.
+2025-05-13 22:01:03 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-05-13 22:01:03 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-13 22:01:03 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2025-05-13 22:01:03 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-13 22:01:03 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 242 ms
+2025-05-13 22:01:03 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-13 22:01:03 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-05-13 22:01:03 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-13 22:01:03 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-6 - Starting...
+2025-05-13 22:01:03 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-6 - Added connection org.mariadb.jdbc.MariaDbConnection@62341733
+2025-05-13 22:01:03 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-6 - Start completed.
+2025-05-13 22:01:03 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-13 22:01:03 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-13 22:01:03 [restartedMain] DEBUG c.P.Auth.Services.AuthFilterService - Filter 'authFilterService' configured for use
+2025-05-13 22:01:03 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-13 22:01:03 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@240ec628, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2f501dad, org.springframework.security.web.context.SecurityContextHolderFilter@5095ace0, org.springframework.security.web.header.HeaderWriterFilter@1dd89de1, org.springframework.web.filter.CorsFilter@5d7c0c6b, org.springframework.security.web.authentication.logout.LogoutFilter@481fa8e, com.ProjectMovie.Auth.Services.AuthFilterService@2b9e98fe, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@337addf, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5a591fcd, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@220f1c85, org.springframework.security.web.session.SessionManagementFilter@4eadab3e, org.springframework.security.web.access.ExceptionTranslationFilter@6d67d2c7, org.springframework.security.web.access.intercept.AuthorizationFilter@28532172]
+2025-05-13 22:01:03 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-05-13 22:01:03 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2025-05-13 22:01:03 [restartedMain] INFO  c.P.MovieBackendSpringBootApplication - Started MovieBackendSpringBootApplication in 0.656 seconds (process running for 2553.855)
+2025-05-13 22:01:03 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2025-05-13 22:04:21 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-05-13 22:04:21 [Thread-23] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-13 22:04:21 [Thread-23] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-6 - Shutdown initiated...
+2025-05-13 22:04:21 [Thread-23] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-6 - Shutdown completed.
+2025-05-13 22:04:21 [restartedMain] INFO  c.P.MovieBackendSpringBootApplication - Starting MovieBackendSpringBootApplication using Java 17.0.12 with PID 320 (C:\Users\Admin\Desktop\BaseMent\MovieBackendSpringBoot\target\classes started by Admin in C:\Users\Admin\Desktop\BaseMent\MovieBackendSpringBoot)
+2025-05-13 22:04:21 [restartedMain] DEBUG c.P.MovieBackendSpringBootApplication - Running with Spring Boot v3.2.3, Spring v6.1.4
+2025-05-13 22:04:21 [restartedMain] INFO  c.P.MovieBackendSpringBootApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-13 22:04:21 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-13 22:04:21 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 14 ms. Found 5 JPA repository interfaces.
+2025-05-13 22:04:21 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-05-13 22:04:21 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-13 22:04:21 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2025-05-13 22:04:21 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-13 22:04:21 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 240 ms
+2025-05-13 22:04:21 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-13 22:04:21 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-05-13 22:04:21 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-13 22:04:21 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-7 - Starting...
+2025-05-13 22:04:21 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-7 - Added connection org.mariadb.jdbc.MariaDbConnection@6ac5aad1
+2025-05-13 22:04:21 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-7 - Start completed.
+2025-05-13 22:04:21 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-13 22:04:21 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-13 22:04:21 [restartedMain] DEBUG c.P.Auth.Services.AuthFilterService - Filter 'authFilterService' configured for use
+2025-05-13 22:04:21 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-13 22:04:21 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1e836b36, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@465740f3, org.springframework.security.web.context.SecurityContextHolderFilter@3c7d3737, org.springframework.security.web.header.HeaderWriterFilter@786c165a, org.springframework.web.filter.CorsFilter@2b74862c, org.springframework.security.web.authentication.logout.LogoutFilter@31ed3c21, com.ProjectMovie.Auth.Services.AuthFilterService@420c8c67, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@67bebce4, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7ff8b88f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@521e5a92, org.springframework.security.web.session.SessionManagementFilter@cc2fba5, org.springframework.security.web.access.ExceptionTranslationFilter@2dbed4c8, org.springframework.security.web.access.intercept.AuthorizationFilter@1920075f]
+2025-05-13 22:04:22 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-05-13 22:04:22 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2025-05-13 22:04:22 [restartedMain] INFO  c.P.MovieBackendSpringBootApplication - Started MovieBackendSpringBootApplication in 0.745 seconds (process running for 2752.457)
+2025-05-13 22:04:22 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2025-05-13 22:12:24 [restartedMain] INFO  c.P.MovieBackendSpringBootApplication - Starting MovieBackendSpringBootApplication using Java 17.0.12 with PID 8252 (C:\Users\Admin\Desktop\BaseMent\MovieBackendSpringBoot\target\classes started by Admin in C:\Users\Admin\Desktop\BaseMent\MovieBackendSpringBoot)
+2025-05-13 22:12:24 [restartedMain] DEBUG c.P.MovieBackendSpringBootApplication - Running with Spring Boot v3.2.3, Spring v6.1.4
+2025-05-13 22:12:24 [restartedMain] INFO  c.P.MovieBackendSpringBootApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-13 22:12:24 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-05-13 22:12:24 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-05-13 22:12:25 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-13 22:12:25 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 84 ms. Found 5 JPA repository interfaces.
+2025-05-13 22:12:25 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-05-13 22:12:26 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-13 22:12:26 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2025-05-13 22:12:26 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-13 22:12:26 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1854 ms
+2025-05-13 22:12:26 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-13 22:12:26 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2025-05-13 22:12:26 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-05-13 22:12:27 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-13 22:12:27 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-05-13 22:12:27 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.mariadb.jdbc.MariaDbConnection@615b9cac
+2025-05-13 22:12:27 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-05-13 22:12:27 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-13 22:12:28 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-13 22:12:29 [restartedMain] DEBUG c.P.Auth.Services.AuthFilterService - Filter 'authFilterService' configured for use
+2025-05-13 22:12:29 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-13 22:12:30 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@24dbf032, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4eb90acd, org.springframework.security.web.context.SecurityContextHolderFilter@5eed03cf, org.springframework.security.web.header.HeaderWriterFilter@16f2e641, org.springframework.web.filter.CorsFilter@63d4d609, org.springframework.security.web.authentication.logout.LogoutFilter@2af8b51b, com.ProjectMovie.Auth.Services.AuthFilterService@a32c867, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5cf3b2d8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6c0aa9c8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@a7954fe, org.springframework.security.web.session.SessionManagementFilter@61a6f660, org.springframework.security.web.access.ExceptionTranslationFilter@21107089, org.springframework.security.web.access.intercept.AuthorizationFilter@93c6692]
+2025-05-13 22:12:30 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-05-13 22:12:30 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2025-05-13 22:12:30 [restartedMain] INFO  c.P.MovieBackendSpringBootApplication - Started MovieBackendSpringBootApplication in 6.926 seconds (process running for 7.379)
+2025-05-13 22:16:17 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-13 22:16:17 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-05-13 22:16:17 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-05-13 22:34:42 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-05-13 22:34:42 [Thread-5] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-13 22:34:42 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-05-13 22:34:42 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-05-13 22:34:42 [restartedMain] INFO  c.P.MovieBackendSpringBootApplication - Starting MovieBackendSpringBootApplication using Java 17.0.12 with PID 8252 (C:\Users\Admin\Desktop\BaseMent\MovieBackendSpringBoot\target\classes started by Admin in C:\Users\Admin\Desktop\BaseMent\MovieBackendSpringBoot)
+2025-05-13 22:34:42 [restartedMain] DEBUG c.P.MovieBackendSpringBootApplication - Running with Spring Boot v3.2.3, Spring v6.1.4
+2025-05-13 22:34:42 [restartedMain] INFO  c.P.MovieBackendSpringBootApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-13 22:34:42 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-13 22:34:42 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 20 ms. Found 5 JPA repository interfaces.
+2025-05-13 22:34:42 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-05-13 22:34:42 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-13 22:34:42 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2025-05-13 22:34:43 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-13 22:34:43 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 326 ms
+2025-05-13 22:34:43 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-13 22:34:43 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-05-13 22:34:43 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-13 22:34:43 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2025-05-13 22:34:43 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Added connection org.mariadb.jdbc.MariaDbConnection@41e1c13f
+2025-05-13 22:34:43 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2025-05-13 22:34:43 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-13 22:34:43 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-13 22:34:43 [restartedMain] DEBUG c.P.Auth.Services.AuthFilterService - Filter 'authFilterService' configured for use
+2025-05-13 22:34:43 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-13 22:34:43 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@24ceca22, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4904bed0, org.springframework.security.web.context.SecurityContextHolderFilter@a32273e, org.springframework.security.web.header.HeaderWriterFilter@63b3a369, org.springframework.web.filter.CorsFilter@63dc98e9, org.springframework.security.web.authentication.logout.LogoutFilter@189eb73c, com.ProjectMovie.Auth.Services.AuthFilterService@5fa0f902, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7503ae08, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@b55f32a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@10968d58, org.springframework.security.web.session.SessionManagementFilter@39063aae, org.springframework.security.web.access.ExceptionTranslationFilter@207be6a6, org.springframework.security.web.access.intercept.AuthorizationFilter@546d5840]
+2025-05-13 22:34:43 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-05-13 22:34:43 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2025-05-13 22:34:43 [restartedMain] INFO  c.P.MovieBackendSpringBootApplication - Started MovieBackendSpringBootApplication in 1.096 seconds (process running for 1340.412)
+2025-05-13 22:34:43 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2025-05-13 22:34:45 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-13 22:34:45 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-05-13 22:34:45 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-05-13 22:35:10 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-05-13 22:35:10 [Thread-7] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-13 22:35:10 [Thread-7] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
+2025-05-13 22:35:10 [Thread-7] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
+2025-05-13 22:35:10 [restartedMain] INFO  c.P.MovieBackendSpringBootApplication - Starting MovieBackendSpringBootApplication using Java 17.0.12 with PID 8252 (C:\Users\Admin\Desktop\BaseMent\MovieBackendSpringBoot\target\classes started by Admin in C:\Users\Admin\Desktop\BaseMent\MovieBackendSpringBoot)
+2025-05-13 22:35:10 [restartedMain] DEBUG c.P.MovieBackendSpringBootApplication - Running with Spring Boot v3.2.3, Spring v6.1.4
+2025-05-13 22:35:10 [restartedMain] INFO  c.P.MovieBackendSpringBootApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-13 22:35:11 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-13 22:35:11 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 18 ms. Found 5 JPA repository interfaces.
+2025-05-13 22:35:11 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-05-13 22:35:11 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-13 22:35:11 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2025-05-13 22:35:11 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-13 22:35:11 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 286 ms
+2025-05-13 22:35:11 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-13 22:35:11 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-05-13 22:35:11 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-13 22:35:11 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Starting...
+2025-05-13 22:35:11 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Added connection org.mariadb.jdbc.MariaDbConnection@66c66fe
+2025-05-13 22:35:11 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Start completed.
+2025-05-13 22:35:11 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-13 22:35:11 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-13 22:35:11 [restartedMain] DEBUG c.P.Auth.Services.AuthFilterService - Filter 'authFilterService' configured for use
+2025-05-13 22:35:11 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-13 22:35:11 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7a9a2cd5, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4a2b07f2, org.springframework.security.web.context.SecurityContextHolderFilter@634e0482, org.springframework.security.web.header.HeaderWriterFilter@7f35f412, org.springframework.web.filter.CorsFilter@3d7a1a45, org.springframework.security.web.authentication.logout.LogoutFilter@6d6bad51, com.ProjectMovie.Auth.Services.AuthFilterService@1686dd18, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5ad85224, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@a1da809, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6b6d22c6, org.springframework.security.web.session.SessionManagementFilter@1ccd06d1, org.springframework.security.web.access.ExceptionTranslationFilter@288235aa, org.springframework.security.web.access.intercept.AuthorizationFilter@120038f4]
+2025-05-13 22:35:11 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-05-13 22:35:11 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2025-05-13 22:35:11 [restartedMain] INFO  c.P.MovieBackendSpringBootApplication - Started MovieBackendSpringBootApplication in 0.878 seconds (process running for 1368.417)
+2025-05-13 22:35:11 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2025-05-13 22:35:14 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-13 22:35:14 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-05-13 22:35:14 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2025-05-13 22:37:14 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-05-13 22:37:14 [Thread-11] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-13 22:37:14 [Thread-11] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown initiated...
+2025-05-13 22:37:14 [Thread-11] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown completed.
+2025-05-13 22:37:14 [restartedMain] INFO  c.P.MovieBackendSpringBootApplication - Starting MovieBackendSpringBootApplication using Java 17.0.12 with PID 8252 (C:\Users\Admin\Desktop\BaseMent\MovieBackendSpringBoot\target\classes started by Admin in C:\Users\Admin\Desktop\BaseMent\MovieBackendSpringBoot)
+2025-05-13 22:37:14 [restartedMain] DEBUG c.P.MovieBackendSpringBootApplication - Running with Spring Boot v3.2.3, Spring v6.1.4
+2025-05-13 22:37:14 [restartedMain] INFO  c.P.MovieBackendSpringBootApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-13 22:37:14 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-13 22:37:14 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 19 ms. Found 5 JPA repository interfaces.
+2025-05-13 22:37:14 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-05-13 22:37:14 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-13 22:37:14 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2025-05-13 22:37:14 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-13 22:37:14 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 298 ms
+2025-05-13 22:37:14 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-13 22:37:14 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-05-13 22:37:14 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-13 22:37:14 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Starting...
+2025-05-13 22:37:14 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-4 - Added connection org.mariadb.jdbc.MariaDbConnection@2357cdb5
+2025-05-13 22:37:14 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Start completed.
+2025-05-13 22:37:14 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-13 22:37:14 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-13 22:37:14 [restartedMain] DEBUG c.P.Auth.Services.AuthFilterService - Filter 'authFilterService' configured for use
+2025-05-13 22:37:14 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-13 22:37:14 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@30317060, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7450ea22, org.springframework.security.web.context.SecurityContextHolderFilter@1777ea54, org.springframework.security.web.header.HeaderWriterFilter@f87de94, org.springframework.web.filter.CorsFilter@690c24ed, org.springframework.security.web.authentication.logout.LogoutFilter@16aa51fd, com.ProjectMovie.Auth.Services.AuthFilterService@71bdc04d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7ed62171, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4f142341, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6ccfc4ff, org.springframework.security.web.session.SessionManagementFilter@168cf9d5, org.springframework.security.web.access.ExceptionTranslationFilter@5b4651ca, org.springframework.security.web.access.intercept.AuthorizationFilter@37d819ad]
+2025-05-13 22:37:15 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-05-13 22:37:15 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2025-05-13 22:37:15 [restartedMain] INFO  c.P.MovieBackendSpringBootApplication - Started MovieBackendSpringBootApplication in 0.784 seconds (process running for 1491.705)
+2025-05-13 22:37:15 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2025-05-13 22:37:17 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-05-13 22:37:17 [Thread-15] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-13 22:37:17 [Thread-15] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Shutdown initiated...
+2025-05-13 22:37:17 [Thread-15] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Shutdown completed.
+2025-05-13 22:37:17 [restartedMain] INFO  c.P.MovieBackendSpringBootApplication - Starting MovieBackendSpringBootApplication using Java 17.0.12 with PID 8252 (C:\Users\Admin\Desktop\BaseMent\MovieBackendSpringBoot\target\classes started by Admin in C:\Users\Admin\Desktop\BaseMent\MovieBackendSpringBoot)
+2025-05-13 22:37:17 [restartedMain] DEBUG c.P.MovieBackendSpringBootApplication - Running with Spring Boot v3.2.3, Spring v6.1.4
+2025-05-13 22:37:17 [restartedMain] INFO  c.P.MovieBackendSpringBootApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-13 22:37:17 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-13 22:37:17 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 14 ms. Found 5 JPA repository interfaces.
+2025-05-13 22:37:17 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-05-13 22:37:17 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-13 22:37:17 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2025-05-13 22:37:17 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-13 22:37:17 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 212 ms
+2025-05-13 22:37:17 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-13 22:37:17 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-05-13 22:37:17 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-13 22:37:17 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Starting...
+2025-05-13 22:37:17 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection org.mariadb.jdbc.MariaDbConnection@8a205de
+2025-05-13 22:37:17 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Start completed.
+2025-05-13 22:37:17 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-13 22:37:18 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-13 22:37:18 [restartedMain] DEBUG c.P.Auth.Services.AuthFilterService - Filter 'authFilterService' configured for use
+2025-05-13 22:37:18 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-13 22:37:18 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@33ceafad, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@327055b0, org.springframework.security.web.context.SecurityContextHolderFilter@105f609c, org.springframework.security.web.header.HeaderWriterFilter@76bb0da6, org.springframework.web.filter.CorsFilter@182c7a8f, org.springframework.security.web.authentication.logout.LogoutFilter@36e6eb37, com.ProjectMovie.Auth.Services.AuthFilterService@2209678, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@37a9756, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2d026ca2, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5bbcbcbe, org.springframework.security.web.session.SessionManagementFilter@4e57de65, org.springframework.security.web.access.ExceptionTranslationFilter@612e4312, org.springframework.security.web.access.intercept.AuthorizationFilter@5f281d6a]
+2025-05-13 22:37:18 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-05-13 22:37:18 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2025-05-13 22:37:18 [restartedMain] INFO  c.P.MovieBackendSpringBootApplication - Started MovieBackendSpringBootApplication in 0.741 seconds (process running for 1494.967)
+2025-05-13 22:37:18 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2025-05-13 22:37:25 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-13 22:37:25 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-05-13 22:37:25 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-05-13 22:41:16 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-05-13 22:41:16 [Thread-19] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-13 22:41:16 [Thread-19] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Shutdown initiated...
+2025-05-13 22:41:16 [Thread-19] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Shutdown completed.
+2025-05-13 22:41:16 [restartedMain] INFO  c.P.MovieBackendSpringBootApplication - Starting MovieBackendSpringBootApplication using Java 17.0.12 with PID 8252 (C:\Users\Admin\Desktop\BaseMent\MovieBackendSpringBoot\target\classes started by Admin in C:\Users\Admin\Desktop\BaseMent\MovieBackendSpringBoot)
+2025-05-13 22:41:16 [restartedMain] DEBUG c.P.MovieBackendSpringBootApplication - Running with Spring Boot v3.2.3, Spring v6.1.4
+2025-05-13 22:41:16 [restartedMain] INFO  c.P.MovieBackendSpringBootApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-13 22:41:16 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-13 22:41:16 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 21 ms. Found 5 JPA repository interfaces.
+2025-05-13 22:41:16 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-05-13 22:41:16 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-13 22:41:16 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2025-05-13 22:41:16 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-13 22:41:16 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 279 ms
+2025-05-13 22:41:16 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-13 22:41:16 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-05-13 22:41:16 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-13 22:41:16 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-6 - Starting...
+2025-05-13 22:41:16 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-6 - Added connection org.mariadb.jdbc.MariaDbConnection@7976028a
+2025-05-13 22:41:16 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-6 - Start completed.
+2025-05-13 22:41:16 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-13 22:41:17 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-13 22:41:17 [restartedMain] DEBUG c.P.Auth.Services.AuthFilterService - Filter 'authFilterService' configured for use
+2025-05-13 22:41:17 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-13 22:41:17 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1330c04b, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@28f2a574, org.springframework.security.web.context.SecurityContextHolderFilter@2a661840, org.springframework.security.web.header.HeaderWriterFilter@5b3ca22d, org.springframework.web.filter.CorsFilter@48b0a25a, org.springframework.security.web.authentication.logout.LogoutFilter@66cbb657, com.ProjectMovie.Auth.Services.AuthFilterService@683a48a5, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7bb27d2a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@45a195bb, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@60a6a877, org.springframework.security.web.session.SessionManagementFilter@c06ad6b, org.springframework.security.web.access.ExceptionTranslationFilter@2e6fed53, org.springframework.security.web.access.intercept.AuthorizationFilter@473d9cb0]
+2025-05-13 22:41:17 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-05-13 22:41:17 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2025-05-13 22:41:17 [restartedMain] INFO  c.P.MovieBackendSpringBootApplication - Started MovieBackendSpringBootApplication in 0.734 seconds (process running for 1733.986)
+2025-05-13 22:41:17 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2025-05-13 22:41:21 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-13 22:41:21 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-05-13 22:41:21 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-05-13 22:49:06 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-05-13 22:49:06 [Thread-23] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-13 22:49:06 [Thread-23] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-6 - Shutdown initiated...
+2025-05-13 22:49:06 [Thread-23] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-6 - Shutdown completed.
+2025-05-13 22:49:06 [restartedMain] INFO  c.P.MovieBackendSpringBootApplication - Starting MovieBackendSpringBootApplication using Java 17.0.12 with PID 8252 (C:\Users\Admin\Desktop\BaseMent\MovieBackendSpringBoot\target\classes started by Admin in C:\Users\Admin\Desktop\BaseMent\MovieBackendSpringBoot)
+2025-05-13 22:49:06 [restartedMain] DEBUG c.P.MovieBackendSpringBootApplication - Running with Spring Boot v3.2.3, Spring v6.1.4
+2025-05-13 22:49:06 [restartedMain] INFO  c.P.MovieBackendSpringBootApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-13 22:49:06 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-13 22:49:06 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 16 ms. Found 5 JPA repository interfaces.
+2025-05-13 22:49:07 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-05-13 22:49:07 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-13 22:49:07 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2025-05-13 22:49:07 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-13 22:49:07 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 253 ms
+2025-05-13 22:49:07 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-13 22:49:07 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-05-13 22:49:07 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-13 22:49:07 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-7 - Starting...
+2025-05-13 22:49:07 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-7 - Added connection org.mariadb.jdbc.MariaDbConnection@5a803df3
+2025-05-13 22:49:07 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-7 - Start completed.
+2025-05-13 22:49:07 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-13 22:49:07 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-13 22:49:07 [restartedMain] DEBUG c.P.Auth.Services.AuthFilterService - Filter 'authFilterService' configured for use
+2025-05-13 22:49:07 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-13 22:49:07 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2671f2aa, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@79a814ee, org.springframework.security.web.context.SecurityContextHolderFilter@5b94e413, org.springframework.security.web.header.HeaderWriterFilter@7a6395f0, org.springframework.web.filter.CorsFilter@2a0ff2c, org.springframework.security.web.authentication.logout.LogoutFilter@73a5946e, com.ProjectMovie.Auth.Services.AuthFilterService@43859190, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6623d0b4, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@91595, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2864baa9, org.springframework.security.web.session.SessionManagementFilter@2035fbcb, org.springframework.security.web.access.ExceptionTranslationFilter@14a535e0, org.springframework.security.web.access.intercept.AuthorizationFilter@43164589]
+2025-05-13 22:49:07 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-05-13 22:49:07 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2025-05-13 22:49:07 [restartedMain] INFO  c.P.MovieBackendSpringBootApplication - Started MovieBackendSpringBootApplication in 0.654 seconds (process running for 2204.088)
+2025-05-13 22:49:07 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2025-05-13 22:49:11 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-13 22:49:11 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-05-13 22:49:11 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2025-05-13 23:06:01 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-05-13 23:06:01 [Thread-27] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-13 23:06:01 [Thread-27] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-7 - Shutdown initiated...
+2025-05-13 23:06:01 [Thread-27] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-7 - Shutdown completed.
+2025-05-13 23:06:01 [restartedMain] INFO  c.P.MovieBackendSpringBootApplication - Starting MovieBackendSpringBootApplication using Java 17.0.12 with PID 8252 (C:\Users\Admin\Desktop\BaseMent\MovieBackendSpringBoot\target\classes started by Admin in C:\Users\Admin\Desktop\BaseMent\MovieBackendSpringBoot)
+2025-05-13 23:06:01 [restartedMain] DEBUG c.P.MovieBackendSpringBootApplication - Running with Spring Boot v3.2.3, Spring v6.1.4
+2025-05-13 23:06:01 [restartedMain] INFO  c.P.MovieBackendSpringBootApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-13 23:06:01 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-13 23:06:01 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 17 ms. Found 5 JPA repository interfaces.
+2025-05-13 23:06:01 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-05-13 23:06:01 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-13 23:06:01 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2025-05-13 23:06:01 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-13 23:06:01 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 241 ms
+2025-05-13 23:06:01 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-13 23:06:01 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-05-13 23:06:01 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-13 23:06:01 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-8 - Starting...
+2025-05-13 23:06:01 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-8 - Added connection org.mariadb.jdbc.MariaDbConnection@606669a1
+2025-05-13 23:06:01 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-8 - Start completed.
+2025-05-13 23:06:01 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-13 23:06:01 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-13 23:06:02 [restartedMain] DEBUG c.P.Auth.Services.AuthFilterService - Filter 'authFilterService' configured for use
+2025-05-13 23:06:02 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-13 23:06:02 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@34504bd4, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@61908ee, org.springframework.security.web.context.SecurityContextHolderFilter@4a014c70, org.springframework.security.web.header.HeaderWriterFilter@bcb3e97, org.springframework.web.filter.CorsFilter@7ef60501, org.springframework.security.web.authentication.logout.LogoutFilter@6c8bce0e, com.ProjectMovie.Auth.Services.AuthFilterService@87b1a50, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@26681639, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7485abe5, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2aa29b41, org.springframework.security.web.session.SessionManagementFilter@44d394e6, org.springframework.security.web.access.ExceptionTranslationFilter@7173becf, org.springframework.security.web.access.intercept.AuthorizationFilter@53379c58]
+2025-05-13 23:06:02 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-05-13 23:06:02 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2025-05-13 23:06:02 [restartedMain] INFO  c.P.MovieBackendSpringBootApplication - Started MovieBackendSpringBootApplication in 0.689 seconds (process running for 3218.86)
+2025-05-13 23:06:02 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2025-05-13 23:06:24 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-13 23:06:24 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-05-13 23:06:24 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
