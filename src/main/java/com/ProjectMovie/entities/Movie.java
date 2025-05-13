@@ -67,13 +67,12 @@ public class Movie {
     @NotNull(message = "Vui lòng nhập thời lượng phim!")
     private Integer duration;
 
-    @Column(nullable = false)
-    @NotBlank(message = "Vui lòng nhập image URL !")
+    @Column(nullable = true)
     private String imageUrl;
 
-    @NotBlank(message = "Vui lòng nhập video url !")
+    @Column(nullable = true)
     private String videoUrl;
 
-    @NotBlank(message = "Vui lòng nhập backdrop url !")
+    @Column(nullable = true)
     private String backdropUrl;
 }

@@ -8,6 +8,7 @@ import com.ProjectMovie.Interface.FileService;
 import com.ProjectMovie.Interface.MovieService;
 import com.ProjectMovie.dto.MovieDTO;
 import com.ProjectMovie.entities.Movie;
+import com.ProjectMovie.entities.MovieStatus;
 import com.ProjectMovie.entities.Watchlist;
 import com.ProjectMovie.repositories.MovieRepository;
 import com.fasterxml.jackson.core.type.TypeReference;
@@ -63,17 +64,11 @@ public class MovieServiceImpl implements MovieService {
         }
 
         @Override
-        public MovieDTO addMovie(MovieDTO movieDTO, String response) throws IOException {
+        public MovieDTO addMovie(MovieDTO movieDTO) throws IOException {
+                if (movieDTO.getVideoUrl() == null) {
+                        movieDTO.setStatus(MovieStatus.UPCOMING);
+                }
                 logger.info("Starting addMovie process");
-
-                JSONObject jsonObject = new JSONObject(response);
-                String imageUrl = jsonObject.getJSONObject("data").getJSONObject("linkIMG").getString("link");
-                String videoUrl = jsonObject.getJSONObject("data").getJSONObject("linkVIDEO").getString("link");
-                String backdropUrl = jsonObject.getJSONObject("data").getJSONObject("linkBACKDROP").getString("link");
-                // 1. upload the file
-                movieDTO.setImageUrl(imageUrl);
-                movieDTO.setVideoUrl(videoUrl);
-                movieDTO.setBackdropUrl(backdropUrl);
                 // 3. map dto to Movie object
                 logger.debug("Mapping DTO to Movie entity");
 
@@ -89,9 +84,9 @@ public class MovieServiceImpl implements MovieService {
                                 movieDTO.getMovieCast(),
                                 movieDTO.getReleaseYear(),
                                 movieDTO.getDuration(),
-                                imageUrl,
-                                videoUrl,
-                                backdropUrl);
+                                movieDTO.getImageUrl(),
+                                movieDTO.getVideoUrl(),
+                                movieDTO.getBackdropUrl());
 
                 // 4. save -> saved
                 logger.debug("Saving movie to database");

@@ -22,7 +22,7 @@ import java.io.IOException;
 import org.springframework.web.client.RestTemplate;
 
 @RestController
-@RequestMapping("/api/upload")
+@RequestMapping("/api/v1/upload")
 public class ChunkUploadController {
 
     @Autowired
@@ -33,7 +33,7 @@ public class ChunkUploadController {
     @Value("${base.url.api}")
     private String cdnServerUrl;
 
-    @PostMapping("/movie")
+    @PostMapping("/media")
     public ResponseEntity<Object> uploadMovie(
             @RequestPart("image") MultipartFile image,
             @RequestPart("video") MultipartFile video,
@@ -41,7 +41,6 @@ public class ChunkUploadController {
             @RequestPart("movieDTO") String movieDTOJson) throws IOException {
 
         try {
-
             System.out.println("HAS PING CHUNK UPLOAD");
 
             chunkUploadService.uploadAllChunks(image, "image");
@@ -71,7 +70,7 @@ public class ChunkUploadController {
 
             System.out.println("PRE COMPLETE UPLOAD");
             ResponseEntity<Object> response = restTemplate.postForEntity(
-                    cdnServerUrl + "/api/completeUpload?name=Jaki and Emma",
+                    cdnServerUrl + "/api/completeUpload?name=" + movieDTO.getTitle(),
                     requestEntity,
                     Object.class);
 
@@ -79,7 +78,6 @@ public class ChunkUploadController {
 
             return ResponseEntity.ok(response.getBody());
         } catch (Exception e) {
-            System.out.println("NGUUU: " + e);
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
         }
     }

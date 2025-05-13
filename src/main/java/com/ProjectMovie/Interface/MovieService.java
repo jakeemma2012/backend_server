@@ -2,7 +2,6 @@ package com.ProjectMovie.Interface;
 
 import com.ProjectMovie.Exceptions.EmptyFileException;
 import com.ProjectMovie.dto.MovieDTO;
-import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
 import java.util.List;
@@ -10,8 +9,7 @@ import java.util.Map;
 
 public interface MovieService {
 
-    MovieDTO addMovie(MovieDTO movieDTO, String response)
-            throws IOException, EmptyFileException;
+    MovieDTO addMovie(MovieDTO movieDTO) throws IOException, EmptyFileException;
 
     MovieDTO getMovieById(int id);
 

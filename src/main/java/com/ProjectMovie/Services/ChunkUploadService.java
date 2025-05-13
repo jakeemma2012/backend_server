@@ -30,20 +30,17 @@ public class ChunkUploadService {
     @Value("${base.url.api}")
     private String cdnServerUrl;
 
-    private static final int CHUNK_SIZE = 1024 * 1024; // 1MB chunks
+    private static final int CHUNK_SIZE = 1024 * 1024;
 
     private RestTemplate restTemplate = new RestTemplate();
 
     public void uploadAllChunks(MultipartFile file, String fileType) throws IOException {
-        // Tính toán số lượng chunks
         long fileSize = file.getSize();
         int totalChunks = (int) Math.ceil((double) fileSize / CHUNK_SIZE);
 
-        // Tạo thread pool để upload song song
         ExecutorService executorService = Executors.newFixedThreadPool(5);
         List<Future<?>> futures = new ArrayList<>();
 
-        // Upload từng chunk
         for (int chunkIndex = 0; chunkIndex < totalChunks; chunkIndex++) {
             final int currentChunkIndex = chunkIndex;
             Future<?> future = executorService.submit(() -> {
@@ -58,7 +55,6 @@ public class ChunkUploadService {
             futures.add(future);
         }
 
-        // Đợi tất cả chunks upload xong
         for (Future<?> future : futures) {
             try {
                 future.get();
@@ -72,18 +68,15 @@ public class ChunkUploadService {
 
     private void uploadChunk(MultipartFile file, int chunkIndex, int totalChunks, String fileType)
             throws IOException, InterruptedException {
-        // Tính toán vị trí bắt đầu và kết thúc của chunk
         long start = (long) chunkIndex * CHUNK_SIZE;
         long end = Math.min(start + CHUNK_SIZE, file.getSize());
 
-        // Đọc chunk từ file
         byte[] chunkData = new byte[(int) (end - start)];
         try (InputStream inputStream = file.getInputStream()) {
             inputStream.skip(start);
             inputStream.read(chunkData);
         }
 
-        // Tạo request để gửi đến CDN server
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.MULTIPART_FORM_DATA);
 
@@ -91,7 +84,6 @@ public class ChunkUploadService {
         body.add("chunk", new ByteArrayResource(chunkData) {
             @Override
             public String getFilename() {
-                // Format: fileType_fileName_chunkIndex
                 return fileType + "|" + file.getOriginalFilename() + "|" + chunkIndex;
             }
         });
@@ -104,7 +96,6 @@ public class ChunkUploadService {
 
         HttpEntity<MultiValueMap<String, Object>> requestEntity = new HttpEntity<>(body, headers);
 
-        // Gửi chunk đến CDN server với retry mechanism
         int maxRetries = 3;
         int retryCount = 0;
         boolean success = false;
@@ -125,7 +116,7 @@ public class ChunkUploadService {
                     success = true;
                 } else {
                     retryCount++;
-                    Thread.sleep(1000 * retryCount); // Exponential backoff
+                    Thread.sleep(1000 * retryCount);
                 }
             } catch (Exception e) {
                 retryCount++;

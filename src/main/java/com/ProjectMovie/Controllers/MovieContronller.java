@@ -52,52 +52,10 @@ public class MovieContronller {
     @PreAuthorize("hasAuthority('ADMIN')")
     @PostMapping("/add-movie")
     public ResponseEntity<MovieDTO> addMovieHandler(
-            @RequestPart MultipartFile image,
-            @RequestPart MultipartFile video,
-            @RequestPart MultipartFile backdrop,
             @RequestPart String movieDTO)
             throws IOException, EmptyFileException {
-
         MovieDTO dto = convertToDTO(movieDTO);
-
-        HttpHeaders headers = new HttpHeaders();
-        headers.setContentType(MediaType.MULTIPART_FORM_DATA);
-
-        MultiValueMap<String, Object> body = new LinkedMultiValueMap<>();
-
-        body.add("image", new ByteArrayResource(image.getBytes()) {
-            @Override
-            public String getFilename() {
-                return image.getOriginalFilename();
-            }
-        });
-
-        body.add("video", new ByteArrayResource(video.getBytes()) {
-            @Override
-            public String getFilename() {
-                return video.getOriginalFilename();
-            }
-        });
-
-        body.add("backdrop", new ByteArrayResource(backdrop.getBytes()) {
-            @Override
-            public String getFilename() {
-                return backdrop.getOriginalFilename();
-            }
-        });
-
-        HttpEntity<MultiValueMap<String, Object>> requestEntity = new HttpEntity<>(body, headers);
-
-        System.out.println(baseUrlApi + "/api/uploads_all?" + dto.getTitle());
-
-        String respString = restTemplate.postForObject(
-                baseUrlApi + "/api/uploads_all?name=" + dto.getTitle(),
-                requestEntity,
-                String.class);
-
-        System.out.println(respString);
-
-        return new ResponseEntity<>(movieService.addMovie(dto, respString), HttpStatus.CREATED);
+        return new ResponseEntity<>(movieService.addMovie(dto), HttpStatus.CREATED);
     }
 
     private MovieDTO convertToDTO(String movietoObject) throws JsonProcessingException {
