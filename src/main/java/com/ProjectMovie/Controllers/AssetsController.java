@@ -2,6 +2,7 @@ package com.ProjectMovie.Controllers;
 
 import org.springframework.http.*;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.client.RestTemplate;
 
 import com.ProjectMovie.Auth.Repositories.MovieRepositories;
 import com.ProjectMovie.entities.Movie;
@@ -21,8 +22,15 @@ import org.springframework.beans.factory.annotation.Value;
 @CrossOrigin(origins = "*")
 public class AssetsController {
 
+    private final RestTemplate restTemplate = new RestTemplate();
     @Value("${base.url.api}")
     private String baseUrlApi;
+
+    @Value("${base.url}")
+    private String baseUrl;
+
+    @Value("${base.url.apiLocal}")
+    private String baseUrlApiLocal;
 
     // @GetMapping("/get_assets")
     // public ResponseEntity<?> getAsset(@RequestParam("linkAssets") String
@@ -180,6 +188,35 @@ public class AssetsController {
         }
     }
 
+    @GetMapping("/get_cast_list")
+    public ResponseEntity<?> getCastList(@RequestParam("nameMovie") String nameMovie) {
+        try {
+            System.out.println("Name Cast List: " + nameMovie);
+            if (nameMovie == null || nameMovie.trim().isEmpty()) {
+                return ResponseEntity.badRequest().body("Name movie cannot be empty");
+            }
+
+            String url = baseUrlApiLocal + "/api/get_cast_list?nameMovie=" + nameMovie;
+
+            System.out.println("Returning CAST LIST URL: " + url);
+
+            ResponseEntity<String> responseEntity = restTemplate.getForEntity(url, String.class);
+
+            if (responseEntity.getStatusCode() == HttpStatus.OK) {
+                String responseBody = responseEntity.getBody();
+                return ResponseEntity.ok(responseBody);
+            } else {
+                return ResponseEntity.status(responseEntity.getStatusCode())
+                        .body("Error: " + responseEntity.getStatusCodeValue());
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
+                    .body("Error processing request: " + e.getMessage());
+        }
+    }
+
     @GetMapping("/get_cast")
     public ResponseEntity<?> getCast(@RequestParam("linkCast") String linkCast,
             @RequestParam("nameMovie") String nameMovie) {
@@ -192,7 +229,7 @@ public class AssetsController {
 
             System.out.println("Original linkCast: " + linkCast);
 
-            linkCast = linkCast.replaceAll(" ", "") + ".jpg";
+            linkCast = linkCast.replaceAll(" ", "");
             nameMovie = nameMovie.replaceAll(" ", "_");
 
             System.out.println("linkCast: " + linkCast);
