@@ -94,6 +94,17 @@ public class MovieContronller {
         return new ResponseEntity<>(movieService.updateMovie(dto), HttpStatus.OK);
     }
 
+    @GetMapping("/check_favorite")
+    public ResponseEntity<Boolean> checkFavoriteHandler(@RequestParam("email") String email,
+            @RequestParam("movieId") int movieId) {
+        try {
+            System.out.println("CHECK FAVORITE : " + email + " | " + movieId);
+            return new ResponseEntity<>(movieService.checkFavorite(email, movieId), HttpStatus.OK);
+        } catch (Exception e) {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+    }
+
     @PostMapping("/add_favorite")
     public ResponseEntity<String> addFavoriteHandler(@RequestParam("email") String email,
             @RequestParam("movieId") int movieId) {

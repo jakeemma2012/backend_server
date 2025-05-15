@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 
 import java.time.Instant;
 
-@Entity 
+@Entity
 @Getter
 @Builder
 @NoArgsConstructor
@@ -20,7 +20,7 @@ public class RefreshToken {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int tokenId;
 
-    @Column(nullable = false, length =500)
+    @Column(nullable = false, length = 500)
     @NotBlank(message = "Refresh token không được để trống")
     private String refreshToken;
 

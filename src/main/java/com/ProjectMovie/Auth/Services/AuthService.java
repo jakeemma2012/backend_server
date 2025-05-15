@@ -56,6 +56,8 @@ public class AuthService {
     public AuthResponse login(LoginRequest request) {
         String email = request.getEmail();
         String password = request.getPassword();
+        System.out.println("email: " + email);
+        System.out.println("password: " + password);
 
         UsernamePasswordAuthenticationToken authToken = new UsernamePasswordAuthenticationToken(email, password);
 

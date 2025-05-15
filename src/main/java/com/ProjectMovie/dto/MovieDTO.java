@@ -49,4 +49,6 @@ public class MovieDTO {
     private String backdropUrl;
 
     private String trailerUrl;
+
+    private String country;
 }

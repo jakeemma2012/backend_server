@@ -87,7 +87,8 @@ public class MovieServiceImpl implements MovieService {
                                 movieDTO.getImageUrl(),
                                 movieDTO.getVideoUrl(),
                                 movieDTO.getBackdropUrl(),
-                                movieDTO.getTrailerUrl());
+                                movieDTO.getTrailerUrl(),
+                                movieDTO.getCountry());
 
                 // 4. save -> saved
                 logger.debug("Saving movie to database");
@@ -109,7 +110,8 @@ public class MovieServiceImpl implements MovieService {
                                 savedMovie.getImageUrl(),
                                 savedMovie.getVideoUrl(),
                                 savedMovie.getBackdropUrl(),
-                                savedMovie.getTrailerUrl());
+                                savedMovie.getTrailerUrl(),
+                                savedMovie.getCountry());
 
                 logger.info("Completed addMovie process successfully");
 
@@ -137,7 +139,9 @@ public class MovieServiceImpl implements MovieService {
                                 movie.getImageUrl(),
                                 movie.getVideoUrl(),
                                 movie.getBackdropUrl(),
-                                movie.getTrailerUrl());
+                                movie.getTrailerUrl(),
+                                movie.getCountry());
+
                 // 4. nếu có thì trả về movieDTO
                 return movieDTO;
         }
@@ -165,7 +169,8 @@ public class MovieServiceImpl implements MovieService {
                                         movie.getImageUrl(),
                                         movie.getVideoUrl(),
                                         movie.getBackdropUrl(),
-                                        movie.getTrailerUrl());
+                                        movie.getTrailerUrl(),
+                                        movie.getCountry());
 
                         movieDTOs.add(movieDTO);
                 }
@@ -215,7 +220,8 @@ public class MovieServiceImpl implements MovieService {
                                 updatedMovie.getImageUrl(),
                                 updatedMovie.getVideoUrl(),
                                 updatedMovie.getBackdropUrl(),
-                                updatedMovie.getTrailerUrl());
+                                updatedMovie.getTrailerUrl(),
+                                updatedMovie.getCountry());
         }
 
         @Override
@@ -259,5 +265,12 @@ public class MovieServiceImpl implements MovieService {
                         movieDTOs.add(movieDTO);
                 }
                 return movieDTOs;
+        }
+
+        @Override
+        public boolean checkFavorite(String email, int movieId) throws Exception {
+                User user = userRepository.findByEmail(email).orElseThrow(() -> new Exception("User not found"));
+                Watchlist watchlist = watchListRepositories.findByUserAndMovieId(user, movieId);
+                return watchlist != null;
         }
 }

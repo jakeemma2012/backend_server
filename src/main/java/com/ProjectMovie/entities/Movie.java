@@ -78,4 +78,9 @@ public class Movie {
 
     @Column(nullable = true)
     private String trailerUrl;
+
+    @Column(nullable = false)
+    @NotBlank(message = "Vui lòng nhập quốc gia phim !")
+    private String country;
+
 }

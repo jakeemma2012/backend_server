@@ -6,9 +6,16 @@ import com.ProjectMovie.Auth.Repositories.RefreshTokenRepositories;
 import com.ProjectMovie.Auth.Repositories.UserRepositories;
 import com.ProjectMovie.Exceptions.RefeshTokenExpried;
 import com.ProjectMovie.Exceptions.UserException;
+
+import jakarta.transaction.Transactional;
+
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
+import java.net.http.HttpResponse.ResponseInfo;
 import java.time.Instant;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.UUID;
 
 @Service
@@ -50,6 +57,30 @@ public class RefreshTokenService {
             throw new RefeshTokenExpried("Refresh token đã hết hạn, vui lòng đăng nhập lại");
         }
         return refreshToken;
+    }
+
+    @Transactional
+    public void deleteByToken(String token) {
+        try {
+            System.out.println("Xóa Refresh Token: " + token);
+            refreshTokenRepository.deleteByRefreshToken(token);
+        } catch (Exception e) {
+            System.out.println("Lỗi khi xóa Refresh Token: " + e.getMessage());
+        }
+    }
+
+    public ResponseEntity<Map<String, String>> getCurrentUser(String token) {
+        RefreshToken refreshToken = refreshTokenRepository.findByRefreshToken(token)
+                .orElseThrow(() -> new UserException("Không tìm thấy Refresh Token"));
+        System.out.println("refreshToken: " + refreshToken);
+        System.out.println("user: " + refreshToken.getUser());
+        User user = refreshToken.getUser();
+
+        Map<String, String> response = new HashMap<>();
+        response.put("email", user.getEmail());
+        response.put("name", user.getName());
+
+        return ResponseEntity.ok(response);
     }
 
 }

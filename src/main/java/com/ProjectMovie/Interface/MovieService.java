@@ -20,4 +20,6 @@ public interface MovieService {
     Map<String, Object> deleteMovie(int movieId) throws IOException;
 
     List<MovieDTO> getFavorite(String email) throws Exception;
+
+    boolean checkFavorite(String email, int movieId) throws Exception;
 }
