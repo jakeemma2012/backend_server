@@ -11,8 +11,6 @@ import java.util.Set;
 
 import com.ProjectMovie.entities.MovieStatus;
 
-import io.micrometer.common.lang.Nullable;
-
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter

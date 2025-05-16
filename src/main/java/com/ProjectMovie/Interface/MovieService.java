@@ -22,4 +22,8 @@ public interface MovieService {
     List<MovieDTO> getFavorite(String email) throws Exception;
 
     boolean checkFavorite(String email, int movieId) throws Exception;
+
+    List<MovieDTO> getMovieNowShowing();
+
+    List<MovieDTO> getMovieUpcoming();
 }

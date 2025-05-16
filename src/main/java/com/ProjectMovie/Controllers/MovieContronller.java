@@ -68,6 +68,16 @@ public class MovieContronller {
         return new ResponseEntity<>(movieService.getAllMovies(), HttpStatus.OK);
     }
 
+    @GetMapping("/get_movie_now_showing")
+    public ResponseEntity<List<MovieDTO>> getMovieNowShowingHandler() {
+        return new ResponseEntity<>(movieService.getMovieNowShowing(), HttpStatus.OK);
+    }
+
+    @GetMapping("/get_movie_upcoming")
+    public ResponseEntity<List<MovieDTO>> getMovieUpcomingHandler() {
+        return new ResponseEntity<>(movieService.getMovieUpcoming(), HttpStatus.OK);
+    }
+
     @GetMapping("/get/{movieId}")
     public ResponseEntity<MovieDTO> getMovieByIdHandler(@PathVariable int movieId) {
         return new ResponseEntity<>(movieService.getMovieById(movieId), HttpStatus.OK);

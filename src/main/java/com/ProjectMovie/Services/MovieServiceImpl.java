@@ -273,4 +273,58 @@ public class MovieServiceImpl implements MovieService {
                 Watchlist watchlist = watchListRepositories.findByUserAndMovieId(user, movieId);
                 return watchlist != null;
         }
+
+        @Override
+        public List<MovieDTO> getMovieNowShowing() {
+                List<Movie> movies = movieRepository.findByStatus(MovieStatus.RELEASED);
+                List<MovieDTO> movieDTOs = new ArrayList<>();
+                for (Movie movie : movies) {
+                        MovieDTO movieDTO = new MovieDTO(
+                                        movie.getMovieId(),
+                                        movie.getTitle(),
+                                        movie.getRating(),
+                                        movie.getOverviewString(),
+                                        movie.getGenres(),
+                                        movie.getStatus(),
+                                        movie.getStudio(),
+                                        movie.getDirector(),
+                                        movie.getMovieCast(),
+                                        movie.getReleaseYear(),
+                                        movie.getDuration(),
+                                        movie.getImageUrl(),
+                                        movie.getVideoUrl(),
+                                        movie.getBackdropUrl(),
+                                        movie.getTrailerUrl(),
+                                        movie.getCountry());
+                        movieDTOs.add(movieDTO);
+                }
+                return movieDTOs;
+        }
+
+        @Override
+        public List<MovieDTO> getMovieUpcoming() {
+                List<Movie> movies = movieRepository.findByStatus(MovieStatus.UPCOMING);
+                List<MovieDTO> movieDTOs = new ArrayList<>();
+                for (Movie movie : movies) {
+                        MovieDTO movieDTO = new MovieDTO(
+                                        movie.getMovieId(),
+                                        movie.getTitle(),
+                                        movie.getRating(),
+                                        movie.getOverviewString(),
+                                        movie.getGenres(),
+                                        movie.getStatus(),
+                                        movie.getStudio(),
+                                        movie.getDirector(),
+                                        movie.getMovieCast(),
+                                        movie.getReleaseYear(),
+                                        movie.getDuration(),
+                                        movie.getImageUrl(),
+                                        movie.getVideoUrl(),
+                                        movie.getBackdropUrl(),
+                                        movie.getTrailerUrl(),
+                                        movie.getCountry());
+                        movieDTOs.add(movieDTO);
+                }
+                return movieDTOs;
+        }
 }

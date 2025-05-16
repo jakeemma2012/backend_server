@@ -76,4 +76,11 @@ public class AuthService {
                 .role(user.getRole().name())
                 .build();
     }
+
+    public Long getUserIdFromToken(String token) {
+        String email = jwtService.extractUsername(token);
+        User user = userRepository.findByEmail(email)
+                .orElseThrow(() -> new UserException("User not found"));
+        return (long) user.getUserId();
+    }
 }
