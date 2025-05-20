@@ -72,13 +72,13 @@ public class RefreshTokenService {
     public ResponseEntity<Map<String, String>> getCurrentUser(String token) {
         RefreshToken refreshToken = refreshTokenRepository.findByRefreshToken(token)
                 .orElseThrow(() -> new UserException("Không tìm thấy Refresh Token"));
-        System.out.println("refreshToken: " + refreshToken);
-        System.out.println("user: " + refreshToken.getUser());
         User user = refreshToken.getUser();
 
         Map<String, String> response = new HashMap<>();
+        response.put("userId", String.valueOf(user.getUserId()));
         response.put("email", user.getEmail());
         response.put("name", user.getName());
+        response.put("role", user.getRole().name());
 
         return ResponseEntity.ok(response);
     }
